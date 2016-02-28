@@ -1,0 +1,6 @@
+[submodule "cross"]
+	path = cross
+	url = git@github.com:sebasgoldberg/cross.git
+[submodule "agencia"]
+	path = agencia
+	url = git@github.com:sebasgoldberg/agencia.git
