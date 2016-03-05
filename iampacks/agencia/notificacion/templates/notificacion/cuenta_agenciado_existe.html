@@ -1,0 +1,12 @@
+{% extends 'correo/base.html' %}
+{% load i18n %}
+
+{% block mensaje %}
+
+<p>{% trans "Olá" %} {{agenciado.nombre}}</p>
+<p>{% trans "Você está cadastrado no site da Agência Alternativa." %}</p>
+<p>{% trans "Seu nome de usuário é:" %} <strong>{{agenciado.user.username}}</strong></p>
+<p>{% trans "Sua senha é:" %} <strong>{{password}}</strong> {% trans "(Pode mudá-la se assim preferir)" %}</p>
+<p>{% trans "Por favor, entre em seu perfil e certifique-se que os dados estejam corretos. Você pode modificar e atualizar sua informação sempre que for necessário:" %} <a href="{{ambiente.get_base_url}}/agenciado/">{% trans "Acessar a meu perfil" %}</a></p>
+
+{%endblock%}

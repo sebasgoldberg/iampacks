@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{%block busquedas_active%}active{%endblock%}
+
+{% block content %} 
+
+{% if trabajo %}
+  {% block hero %}
+    <div class="hero-unit">
+      {% include 'trabajo/trabajo/contenido.html' with trabajo=trabajo %}
+    </div>
+  {% endblock %}
+{% endif %}
+
+
+<h1>{% trans "Trabalhos Ativos" %}</h1>
+{% include 'trabajo/trabajo/thumbnails.html' with trabajos=trabajos %}
+
+{% endblock %}

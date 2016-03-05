@@ -1,0 +1,233 @@
+{% load i18n %}
+{% load crispy_forms_tags %}
+
+{%with clase_espacio_celda='span3'%}
+
+<div id="modal_mensaje_espere" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">{% trans "Aguarde mientras se envía la información..." %}</h3>
+  </div>
+  <div class="modal-body">
+    <p>{% trans "Este proceso puede demorar unos minutos dependiendo del peso de las fotos y de la velocidad de su conexión a internet" %}</p>
+    <p>{% trans "Una vez finalizado el envío será redirigido nuevamente a su perfil." %}</p>
+  </div>
+</div>
+
+<form id='agenciado-form' enctype="multipart/form-data" method="post"  action="">
+  {% csrf_token %}
+
+  {% if form.errors or direccionFormSet.non_form_errors or direccionFormSet.errors or telefonoFormSet.non_form_errors or telefonoFormSet.errors or fotoAgenciadoFormSet.non_form_errors or fotoAgenciadoFormSet.errors or videoAgenciadoFormSet.non_form_errors or videoAgenciadoFormSet.errors or disponibilidadTrabajoAgenciadoFormSet.non_form_errors or disponibilidadTrabajoAgenciadoFormSet.errors or trabajoVigenteAgenciadoFormSet.non_form_errors or trabajoVigenteAgenciadoFormSet.errors or trabajoRealizadoAgenciadoFormSet.non_form_errors or trabajoRealizadoAgenciadoFormSet.errors%}
+    <div class='alert alert-error'>{% trans "Tem erros por corregir" %}</div>
+  {% endif %}
+
+  {% if form.non_form_errors %}<div class='alert alert-error'>{{ form.non_field_errors }}</div>{%endif%}
+
+  <fieldset>
+    <legend>{% trans "Dados persoais" %}</legend>
+    <div class='row'>
+      <div class='{{clase_espacio_celda}}'>{{form.mail|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.nombre|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.apellido|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.fecha_nacimiento|as_crispy_field}}</div>
+    </div>
+    <div class='row'>
+      <div class='{{clase_espacio_celda}}'>{{form.nombre_artistico|as_crispy_field}}</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Dados administrativos" %}</legend>
+    <div class='row'>
+      <div class='{{clase_espacio_celda}}'>{{form.documento_rg|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.documento_cpf|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.documento_drt|as_crispy_field}}</div>
+    </div>
+    <div class='row'>
+      <div class='{{clase_espacio_celda}}'>{{form.responsable|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.cuenta_bancaria|as_crispy_field}}</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Dados de endereço" %}</legend>
+    {% with direccionFormSet as formset %}
+      {{ formset.management_form }}
+      {% for error in formset.non_form_errors %}
+        <div class='alert alert-error'>{{ error }}</div>
+      {% endfor %}
+      <div class='row'>
+        {% for form in formset %}
+          {% for field in form %}
+            {% if field.name != 'descripcion' %}
+              <div class='{{clase_espacio_celda}}'>{{field|as_crispy_field}}</div>
+            {% endif %}
+          {% endfor %}
+        {% endfor %}
+      </div>
+    {% endwith %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Telefones" %}</legend>
+    {%comment%}
+    {{telefonoFormSet|crispy}}
+    {%endcomment%}
+    {% include 'agenciado/formset.html' with formset=telefonoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Caracteristicas fisicas" %}</legend>
+    <div class='row'>
+      <div class='{{clase_espacio_celda}}'>{{form.sexo|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.ojos|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.pelo|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.piel|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.altura|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.peso|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.talle|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.talle_camisa|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.talle_pantalon|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.calzado|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.estado_dientes|as_crispy_field}}</div>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Habilidades" %}</legend>
+    {{form.deportes}}
+    <hr/>
+    {{form.danzas}}
+    <hr/>
+    {{form.instrumentos}}
+    <hr/>
+    {{form.idiomas}}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Fotos" %}</legend>
+    {% autoescape off %}
+    {{form.instance.thumbnails}}
+    {% endautoescape %}
+    <hr/>
+    {% include 'agenciado/formset.html' with formset=fotoAgenciadoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Videos" %}</legend>
+    {% autoescape off %}
+    {{form.instance.html_small_youtube_iframes}}
+    {% endautoescape %}
+    <hr/>
+    {% include 'agenciado/formset.html' with formset=videoAgenciadoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Disponibilidad horaria para trabajos" %}</legend>
+    {% include 'agenciado/formset.html' with formset=disponibilidadTrabajoAgenciadoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Trabajos vigentes" %}</legend>
+    {% include 'agenciado/formset.html' with formset=trabajoVigenteAgenciadoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Trabajos realizados" %}</legend>
+    {% include 'agenciado/formset.html' with formset=trabajoRealizadoAgenciadoFormSet forms_by_line='3' columns_by_form='4' %}
+  </fieldset>
+
+  <fieldset>
+    <legend>{% trans "Otros dados" %}</legend>
+    <div class='row'>
+      <div class='span2'>{{form.indicador_maneja|as_crispy_field}}</div>
+      <div class='span2'>{{form.indicador_tiene_registro|as_crispy_field}}</div>
+      <div class='span2'>{{form.trabaja_como_extra|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.como_nos_conocio|as_crispy_field}}</div>
+      <div class='{{clase_espacio_celda}}'>{{form.observaciones|as_crispy_field}}</div>
+    </div>
+  </fieldset>
+
+  {{form.next_page|as_crispy_field}}
+
+  <div class="form-actions">
+    <input type="submit" name="submit" value="{% trans "Gravar" %}" class="btn btn-primary" id="submit-id-submit" />
+  </div>
+
+</form>
+{%endwith%}
+
+<script>
+
+  function init_controls_on_fields(){
+    $('.dateinput').datepicker({format: 'yyyy-mm-dd'});
+    //$('.timeinput').timepicker({format: 'hh:mm'});
+    }
+
+  var MAX_COLUMNS=12;
+  $(function(){
+
+    $('#agenciado-form').submit(function(event){
+      $('#modal_mensaje_espere').modal();
+      });
+
+    init_controls_on_fields();
+
+    // Se agrega a los formset la posibilidad de adicionar nuevos forms.
+    $('.add-form-to-formset').click(function(event){
+
+      // Se obtiene el contenedor del formset
+      var formset_container=$(this).parent().parent().parent().find('.formset-container');
+
+      // Se obtienen los atributos del formset
+      var formset_name = $(this).attr('data-formset-name');
+
+      // Se obtienen todos los datos administrativos del formset
+      var TOTAL_FORMS = formset_container.find('#id_'+formset_name+'-TOTAL_FORMS');
+      var INITIAL_FORMS = formset_container.find('#id_'+formset_name+'-INITIAL_FORMS');
+      var MAX_NUM_FORMS = formset_container.find('#id_'+formset_name+'-MAX_NUM_FORMS');
+
+      // Se obtienen los valores de los datos administrativos.
+      var TOTAL_FORMS_value = TOTAL_FORMS.attr('value');
+      var MAX_NUM_FORMS_value = MAX_NUM_FORMS.attr('value');
+
+      // En caso de haber llegado al límite máximo de formularios no se hace nada.
+      if (TOTAL_FORMS_value == MAX_NUM_FORMS_value) 
+        return;
+
+      var empty_form = $(this).attr('data-empty-form').replace(/__prefix__/g,TOTAL_FORMS_value);
+      var columns_by_form = $(this).attr('data-columns-by-form');
+
+      var max_items_per_row = MAX_COLUMNS / columns_by_form;
+      
+      // Se obtiene la última fila de forms en el contenedor del formset.
+      var last_row = formset_container.find('.fila-forms-formset').last();
+
+      // Se obtiene la cantidad de forms en la última fila.
+      var forms_quantity_in_row = last_row.find('.form-formset').length;
+
+      // En caso de haber llegado al limite de forms en la fila, se agrega una nueva fila
+      if (forms_quantity_in_row == max_items_per_row){
+        last_row = formset_container.append(
+          '<div class="row fila-forms-formset">'+
+          '</div>');
+        var last_row = formset_container.find('.fila-forms-formset').last();
+        }
+
+      // Se agrega el nuevo formulario
+      last_row.append(
+        '<div class="span'+columns_by_form+'">'+
+          '<div class="well form-formset">'+
+            empty_form+
+          '</div>'+
+        '</div>');
+
+      // Se incrementa la cantidad total de formularios en una unidad.
+      TOTAL_FORMS.attr('value',parseInt(TOTAL_FORMS_value)+1);
+
+      init_controls_on_fields();
+
+      });
+
+    });
+</script>

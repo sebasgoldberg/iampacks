@@ -1,0 +1,19 @@
+INSTALATION
+-----------
+
+1) install cross
+2) add 'apache' to the apps in settings
+
+USAGE
+-----
+
+1) configure the following settings:
+  a) AMBIENTE.site_id
+  b) AMBIENTE.dominio
+  c) AMBIENTE.project_directory
+  d) AMBIENTE.puerto_http,
+  e) AMBIENTE.puerto_https,
+  f) MEDIA_ROOT,
+  g) STATIC_ROOT,
+  h) AMBIENTE.wsgi_dir
+2) exec ./manage a2create

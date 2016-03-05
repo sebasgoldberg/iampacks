@@ -1,0 +1,411 @@
+- fields: {codigo_video: gxLJIAe-hH4, fecha: 2012-12-01, imagen: '', titulo: "Guaran\xE1",
+    video: 'http://www.youtube.com/watch?v=gxLJIAe-hH4'}
+  model: trabajo.itemportfolio
+  pk: 103
+- fields: {codigo_video: Wbl4jkfieVQ, fecha: 2012-11-01, imagen: '', titulo: Caixa,
+    video: 'http://www.youtube.com/watch?v=Wbl4jkfieVQ'}
+  model: trabajo.itemportfolio
+  pk: 102
+- fields: {codigo_video: kBgjvpX3Kgs, fecha: 2012-11-01, imagen: '', titulo: Etna
+      - Natal, video: 'http://www.youtube.com/watch?v=kBgjvpX3Kgs'}
+  model: trabajo.itemportfolio
+  pk: 99
+- fields: {codigo_video: 8MkNiGT7hEQ, fecha: 2012-10-01, imagen: '', titulo: Parmalat,
+    video: 'http://www.youtube.com/watch?v=8MkNiGT7hEQ'}
+  model: trabajo.itemportfolio
+  pk: 101
+- fields: {codigo_video: TIjuDcNT_YA, fecha: 2012-10-01, imagen: '', titulo: Dettol,
+    video: 'http://www.youtube.com/watch?v=TIjuDcNT_YA'}
+  model: trabajo.itemportfolio
+  pk: 100
+- fields: {codigo_video: vr0vvouBZws, fecha: 2012-10-01, imagen: '', titulo: Lojas
+      Cem, video: 'http://www.youtube.com/watch?v=vr0vvouBZws'}
+  model: trabajo.itemportfolio
+  pk: 96
+- fields: {codigo_video: 0sRXCwvehrw, fecha: 2012-09-01, imagen: '', titulo: Brahma,
+    video: 'http://www.youtube.com/watch?v=0sRXCwvehrw'}
+  model: trabajo.itemportfolio
+  pk: 97
+- fields: {codigo_video: D43U8SirH9s, fecha: 2012-09-01, imagen: '', titulo: Lojas
+      ETNA, video: 'http://www.youtube.com/watch?v=D43U8SirH9s'}
+  model: trabajo.itemportfolio
+  pk: 92
+- fields: {codigo_video: 3L8JQP_1dAA, fecha: 2012-08-01, imagen: '', titulo: McDia
+      FEliz, video: 'http://www.youtube.com/watch?v=3L8JQP_1dAA'}
+  model: trabajo.itemportfolio
+  pk: 89
+- fields: {codigo_video: oCtc-3gzjFA, fecha: 2012-08-01, imagen: '', titulo: Oi, video: 'http://www.youtube.com/watch?v=oCtc-3gzjFA'}
+  model: trabajo.itemportfolio
+  pk: 91
+- fields: {codigo_video: 7oHCudMt1-M, fecha: 2012-08-01, imagen: '', titulo: SKY,
+    video: 'http://www.youtube.com/watch?v=7oHCudMt1-M'}
+  model: trabajo.itemportfolio
+  pk: 90
+- fields: {codigo_video: o0Jh18c8q3c, fecha: 2012-08-01, imagen: '', titulo: Chamito
+      1+1, video: 'http://www.youtube.com/watch?v=o0Jh18c8q3c'}
+  model: trabajo.itemportfolio
+  pk: 93
+- fields: {codigo_video: bi-Jjr-mjmE, fecha: 2012-08-01, imagen: '', titulo: Johnson
+      inspira, video: 'http://www.youtube.com/watch?v=bi-Jjr-mjmE'}
+  model: trabajo.itemportfolio
+  pk: 94
+- fields: {codigo_video: ybWR3LH4krc, fecha: 2012-08-01, imagen: '', titulo: Johnson,
+    video: 'http://www.youtube.com/watch?v=ybWR3LH4krc'}
+  model: trabajo.itemportfolio
+  pk: 95
+- fields: {codigo_video: pM1mBh5LidI, fecha: 2012-08-01, imagen: '', titulo: GVT,
+    video: 'http://www.youtube.com/watch?v=pM1mBh5LidI'}
+  model: trabajo.itemportfolio
+  pk: 98
+- fields: {codigo_video: Xl1L4crdNII, fecha: 2012-06-01, imagen: '', titulo: Drogaria
+      Rosario 1, video: 'http://www.youtube.com/watch?v=Xl1L4crdNII'}
+  model: trabajo.itemportfolio
+  pk: 54
+- fields: {codigo_video: Uye3rEI3I4c, fecha: 2012-06-01, imagen: '', titulo: Drogaria
+      Rosario 3, video: 'http://www.youtube.com/watch?v=Uye3rEI3I4c'}
+  model: trabajo.itemportfolio
+  pk: 55
+- fields: {codigo_video: yWJowPOiO3k, fecha: 2012-06-01, imagen: '', titulo: Drogaria
+      Rosario  4, video: 'http://www.youtube.com/watch?v=yWJowPOiO3k'}
+  model: trabajo.itemportfolio
+  pk: 56
+- fields: {codigo_video: JEPVFrNdf3M, fecha: 2012-06-01, imagen: '', titulo: SBP,
+    video: 'http://www.youtube.com/watch?v=JEPVFrNdf3M&feature=youtu.be'}
+  model: trabajo.itemportfolio
+  pk: 57
+- fields: {codigo_video: Cn4zPadYAV8, fecha: 2012-06-01, imagen: '', titulo: Tintas
+      Iquine, video: 'http://www.youtube.com/watch?v=Cn4zPadYAV8'}
+  model: trabajo.itemportfolio
+  pk: 58
+- fields: {codigo_video: GmNiqwFVND0, fecha: 2012-06-01, imagen: '', titulo: Harpic,
+    video: 'http://www.youtube.com/watch?v=GmNiqwFVND0'}
+  model: trabajo.itemportfolio
+  pk: 59
+- fields: {codigo_video: SAIYqcp7NHU, fecha: 2012-06-01, imagen: '', titulo: Apracur,
+    video: 'http://www.youtube.com/watch?v=SAIYqcp7NHU'}
+  model: trabajo.itemportfolio
+  pk: 53
+- fields: {codigo_video: Gi0glJeSdNg, fecha: 2012-06-01, imagen: '', titulo: "Tang\
+      \ - Esquadr\xE3o Verde", video: 'http://www.youtube.com/watch?v=Gi0glJeSdNg&feature='}
+  model: trabajo.itemportfolio
+  pk: 52
+- fields: {codigo_video: c8aDnjN0MY4, fecha: 2012-06-01, imagen: '', titulo: Fisk,
+    video: 'http://www.youtube.com/watch?v=c8aDnjN0MY4'}
+  model: trabajo.itemportfolio
+  pk: 51
+- fields: {codigo_video: Kn-CzHBGiW8, fecha: 2012-06-01, imagen: '', titulo: E-Marshmallow,
+    video: 'http://www.youtube.com/watch?v=Kn-CzHBGiW8'}
+  model: trabajo.itemportfolio
+  pk: 50
+- fields: {codigo_video: G922br2aPfo, fecha: 2012-06-01, imagen: '', titulo: Tang
+      Pro, video: 'http://www.youtube.com/watch?v=G922br2aPfo&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 49
+- fields: {codigo_video: OJw0HKIQcvg, fecha: 2012-06-01, imagen: '', titulo: Loja
+      Marisa, video: 'http://www.youtube.com/watch?v=OJw0HKIQcvg'}
+  model: trabajo.itemportfolio
+  pk: 48
+- fields: {codigo_video: 9us4zr_f03c, fecha: 2012-06-01, imagen: '', titulo: Novo
+      Jardim Empreendimento, video: 'http://www.youtube.com/watch?v=9us4zr_f03c'}
+  model: trabajo.itemportfolio
+  pk: 47
+- fields: {codigo_video: SjLUdhOCzSc, fecha: 2012-06-01, imagen: '', titulo: Chambinho,
+    video: 'http://www.youtube.com/watch?v=SjLUdhOCzSc'}
+  model: trabajo.itemportfolio
+  pk: 46
+- fields: {codigo_video: _Ndtxm_vO5c, fecha: 2012-06-01, imagen: '', titulo: "Prefeitura\
+      \ de S\xE3o Paulo - Novas UBS", video: 'http://www.youtube.com/watch?v=_Ndtxm_vO5c'}
+  model: trabajo.itemportfolio
+  pk: 60
+- fields: {codigo_video: gwaniKrtEb8, fecha: 2012-06-01, imagen: '', titulo: "Lojas\
+      \ Marisa - Dia das M\xE3es", video: 'http://www.youtube.com/watch?v=gwaniKrtEb8'}
+  model: trabajo.itemportfolio
+  pk: 61
+- fields: {codigo_video: Ree4202ov6Y, fecha: 2012-06-01, imagen: '', titulo: Carrosel,
+    video: 'http://www.youtube.com/watch?v=Ree4202ov6Y'}
+  model: trabajo.itemportfolio
+  pk: 87
+- fields: {codigo_video: 87W5EwINXnY, fecha: 2012-06-01, imagen: '', titulo: Bradesco
+      brazucas, video: 'http://www.youtube.com/watch?v=87W5EwINXnY'}
+  model: trabajo.itemportfolio
+  pk: 81
+- fields: {codigo_video: r3TsjnFge_U, fecha: 2012-06-01, imagen: '', titulo: Tangole,
+    video: 'http://www.youtube.com/watch?v=r3TsjnFge_U'}
+  model: trabajo.itemportfolio
+  pk: 72
+- fields: {codigo_video: MSStvI_nV_Y, fecha: 2012-06-01, imagen: '', titulo: Pernambucanas
+      - 2011, video: 'http://www.youtube.com/watch?v=MSStvI_nV_Y&feature=yva-video-display'}
+  model: trabajo.itemportfolio
+  pk: 71
+- fields: {codigo_video: InhkPePBlpU, fecha: 2012-06-01, imagen: '', titulo: 'Filme:
+      Lula o Filho do Brasil', video: 'http://www.youtube.com/watch?v=InhkPePBlpU&feature=related'}
+  model: trabajo.itemportfolio
+  pk: 70
+- fields: {codigo_video: eRDolm_J1rA, fecha: 2012-06-01, imagen: '', titulo: Magazine
+      Luiza, video: 'http://www.youtube.com/watch?v=eRDolm_J1rA&feature=player_embedded#!'}
+  model: trabajo.itemportfolio
+  pk: 69
+- fields: {codigo_video: OdvNFp_NNw8, fecha: 2012-06-01, imagen: '', titulo: "Microsoft\
+      \ - Esperan\xE7a", video: 'http://www.youtube.com/watch?v=OdvNFp_NNw8&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 68
+- fields: {codigo_video: 9fxxJ0f2fIU, fecha: 2012-06-01, imagen: '', titulo: Protex
+      (Colombia) 2011, video: 'http://www.youtube.com/watch?v=9fxxJ0f2fIU'}
+  model: trabajo.itemportfolio
+  pk: 67
+- fields: {codigo_video: 61C5NjKj34Y, fecha: 2012-06-01, imagen: '', titulo: Honda,
+    video: 'http://www.youtube.com/watch?v=61C5NjKj34Y&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 66
+- fields: {codigo_video: uwEUKk2YKgc, fecha: 2012-06-01, imagen: '', titulo: Repelex
+      Kids, video: 'http://www.youtube.com/watch?v=uwEUKk2YKgc&feature=youtu.be'}
+  model: trabajo.itemportfolio
+  pk: 65
+- fields: {codigo_video: qG0_CDxuFcg, fecha: 2012-06-01, imagen: '', titulo: Queridos
+      Amigos - Rede Globo, video: 'http://www.youtube.com/watch?v=qG0_CDxuFcg&feature=youtu.be'}
+  model: trabajo.itemportfolio
+  pk: 64
+- fields: {codigo_video: X4ruZWZMDmc, fecha: 2012-06-01, imagen: '', titulo: Midway
+      Pais, video: 'http://www.youtube.com/watch?v=X4ruZWZMDmc&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 63
+- fields: {codigo_video: UMyDjij_9lw, fecha: 2012-06-01, imagen: '', titulo: Nescau
+      Cereal, video: 'http://www.youtube.com/watch?v=UMyDjij_9lw&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 62
+- fields: {codigo_video: L6pHu2dpOYk, fecha: 2012-06-01, imagen: '', titulo: Panasonic
+      - Neymar, video: 'http://www.youtube.com/watch?v=L6pHu2dpOYk'}
+  model: trabajo.itemportfolio
+  pk: 88
+- fields: {codigo_video: ojR59AWOVwg, fecha: 2012-06-01, imagen: '', titulo: Tang
+      - Som na Lata, video: 'http://www.youtube.com/watch?v=ojR59AWOVwg&feature=related'}
+  model: trabajo.itemportfolio
+  pk: 45
+- fields: {codigo_video: EL2YtjZMrB4, fecha: 2012-06-01, imagen: '', titulo: Honda
+      - Kuduro, video: 'http://www.youtube.com/watch?v=EL2YtjZMrB4'}
+  model: trabajo.itemportfolio
+  pk: 36
+- fields: {codigo_video: _YshIX26fng, fecha: 2012-06-01, imagen: '', titulo: Natal
+      - Shopping Don Pedro I, video: 'http://www.youtube.com/watch?v=_YshIX26fng'}
+  model: trabajo.itemportfolio
+  pk: 37
+- fields: {codigo_video: Lhm5sjM25nY, fecha: 2012-06-01, imagen: '', titulo: Sadia
+      - Para uma vida mais gostosa, video: 'http://www.youtube.com/watch?v=Lhm5sjM25nY'}
+  model: trabajo.itemportfolio
+  pk: 38
+- fields: {codigo_video: xLTqIQ5UPxE, fecha: 2012-06-01, imagen: '', titulo: "Crian\xE7\
+      a Esperan\xE7a 2010", video: 'http://www.youtube.com/watch?v=xLTqIQ5UPxE'}
+  model: trabajo.itemportfolio
+  pk: 39
+- fields: {codigo_video: B7Tx8zy3L74, fecha: 2012-06-01, imagen: '', titulo: Disney
+      Channel 2010, video: 'http://www.youtube.com/watch?v=B7Tx8zy3L74&feature=email'}
+  model: trabajo.itemportfolio
+  pk: 40
+- fields: {codigo_video: VQxbSEMWAtQ, fecha: 2012-06-01, imagen: '', titulo: "Fraldas\
+      \ Turma da M\xF4nica", video: 'http://www.youtube.com/watch?v=VQxbSEMWAtQ'}
+  model: trabajo.itemportfolio
+  pk: 41
+- fields: {codigo_video: AQyzrrtLKs4, fecha: 2012-06-01, imagen: '', titulo: "Cole\xE7\
+      \xE3o da Copa do Mundo 2010", video: 'http://www.youtube.com/watch?v=AQyzrrtLKs4'}
+  model: trabajo.itemportfolio
+  pk: 42
+- fields: {codigo_video: G4M3K3IPZ5A, fecha: 2012-06-01, imagen: '', titulo: "Lojas\
+      \ Pomp\xE9ia - Dia das Crian\xE7as", video: 'http://www.youtube.com/watch?v=G4M3K3IPZ5A'}
+  model: trabajo.itemportfolio
+  pk: 43
+- fields: {codigo_video: 3d8RssnxVR4, fecha: 2012-06-01, imagen: '', titulo: Sulamerica
+      Saude Seguros, video: 'http://www.youtube.com/watch?v=3d8RssnxVR4'}
+  model: trabajo.itemportfolio
+  pk: 44
+- fields: {codigo_video: J_ot_BVJmTI, fecha: 2012-05-01, imagen: '', titulo: Liberty
+      Seguros, video: 'http://www.youtube.com/watch?v=J_ot_BVJmTI'}
+  model: trabajo.itemportfolio
+  pk: 80
+- fields: {codigo_video: IXNYWzkr_DM, fecha: 2012-05-01, imagen: '', titulo: 'Oi ',
+    video: 'http://www.youtube.com/watch?v=IXNYWzkr_DM'}
+  model: trabajo.itemportfolio
+  pk: 83
+- fields: {codigo_video: _Ox-WQJ3Vqk, fecha: 2012-05-01, imagen: '', titulo: Ovomaltine,
+    video: 'http://www.youtube.com/watch?v=_Ox-WQJ3Vqk'}
+  model: trabajo.itemportfolio
+  pk: 86
+- fields: {codigo_video: 3LnMOS77pjc, fecha: 2012-05-01, imagen: '', titulo: 'Revista
+      GQ: Viagem', video: 'http://www.youtube.com/watch?v=3LnMOS77pjc'}
+  model: trabajo.itemportfolio
+  pk: 79
+- fields: {codigo_video: 6UDyG2KFfZA, fecha: 2012-05-01, imagen: '', titulo: Neston,
+    video: 'http://www.youtube.com/watch?v=6UDyG2KFfZA'}
+  model: trabajo.itemportfolio
+  pk: 82
+- fields: {codigo_video: zzmVZZU6gvo, fecha: 2012-03-01, imagen: '', titulo: Mega
+      Polo out/inv 2012, video: 'http://www.youtube.com/watch?v=zzmVZZU6gvo'}
+  model: trabajo.itemportfolio
+  pk: 84
+- fields: {codigo_video: hkbIXFVQP5U, fecha: 2012-03-01, imagen: '', titulo: Olympikus
+      1976, video: 'http://www.youtube.com/watch?v=hkbIXFVQP5U'}
+  model: trabajo.itemportfolio
+  pk: 78
+- fields: {codigo_video: 8pU3JDtmb6o, fecha: 2012-03-01, imagen: '', titulo: "Kia\
+      \ Stportage - \xF3pera", video: 'http://www.youtube.com/watch?v=8pU3JDtmb6o'}
+  model: trabajo.itemportfolio
+  pk: 77
+- fields: {codigo_video: pYaPhBjmZd4, fecha: 2012-03-01, imagen: '', titulo: "Densia\
+      \ - Dan\xE7a", video: 'http://www.youtube.com/watch?v=pYaPhBjmZd4'}
+  model: trabajo.itemportfolio
+  pk: 76
+- fields: {codigo_video: kpE1zK03q3U, fecha: 2012-02-01, imagen: '', titulo: "Voc\xEA\
+      \ leva a Chevrolet inteira", video: 'http://www.youtube.com/watch?v=kpE1zK03q3U'}
+  model: trabajo.itemportfolio
+  pk: 75
+- fields: {codigo_video: mjgQND9LTfU, fecha: 2012-02-01, imagen: '', titulo: O Brasil
+      chama a Neosa, video: 'http://www.youtube.com/watch?v=mjgQND9LTfU'}
+  model: trabajo.itemportfolio
+  pk: 74
+- fields: {codigo_video: gsQtvTPjDr8, fecha: 2012-01-01, imagen: '', titulo: OMO,
+    video: 'http://www.youtube.com/watch?v=gsQtvTPjDr8&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 24
+- fields: {codigo_video: 50jl-Hs6h_Q, fecha: 2012-01-01, imagen: '', titulo: "Que\
+      \ bicho \xE9 esse - Habbibs", video: 'http://www.youtube.com/watch?v=50jl-Hs6h_Q'}
+  model: trabajo.itemportfolio
+  pk: 17
+- fields: {codigo_video: 770bLRSG7w0, fecha: 2012-01-01, imagen: '', titulo: Power
+      Rangers, video: 'http://www.youtube.com/watch?v=770bLRSG7w0&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 23
+- fields: {codigo_video: ZdpAOmQoA5Q, fecha: 2012-01-01, imagen: '', titulo: "Campanha\
+      \ de vacina\xE7\xE3o contra a paralisia ", video: 'http://www.youtube.com/watch?v=ZdpAOmQoA5Q'}
+  model: trabajo.itemportfolio
+  pk: 32
+- fields: {codigo_video: VfsSE5iwGHc, fecha: 2012-01-01, imagen: '', titulo: "Desfile\
+      \ An\xE1lia Franco", video: 'http://www.youtube.com/watch?v=VfsSE5iwGHc'}
+  model: trabajo.itemportfolio
+  pk: 33
+- fields: {codigo_video: AILa9XrobWg, fecha: 2012-01-01, imagen: '', titulo: Quando
+      bate o sino - 3 temporada, video: 'http://www.youtube.com/watch?v=AILa9XrobWg'}
+  model: trabajo.itemportfolio
+  pk: 85
+- fields: {codigo_video: RmykFPCds_s, fecha: 2012-01-01, imagen: '', titulo: Fashion
+      Kids 2010, video: 'http://www.youtube.com/watch?v=RmykFPCds_s'}
+  model: trabajo.itemportfolio
+  pk: 34
+- fields: {codigo_video: 8JzoGludqJk, fecha: 2012-01-01, imagen: '', titulo: Banco
+      Real, video: 'http://www.youtube.com/watch?v=8JzoGludqJk'}
+  model: trabajo.itemportfolio
+  pk: 15
+- fields: {codigo_video: Fj0_c0lhcvk, fecha: 2012-01-01, imagen: '', titulo: Carrefour,
+    video: 'http://www.youtube.com/watch?v=Fj0_c0lhcvk'}
+  model: trabajo.itemportfolio
+  pk: 35
+- fields: {codigo_video: B_gphG1UJp0, fecha: 2012-01-01, imagen: '', titulo: "Ol\xE9\
+      o Lisa", video: 'http://youtu.be/B_gphG1UJp0'}
+  model: trabajo.itemportfolio
+  pk: 14
+- fields: {codigo_video: 3DAm6peEC-E, fecha: 2012-01-01, imagen: '', titulo: Furnas
+      50 anos, video: 'http://www.youtube.com/watch?v=3DAm6peEC-E&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 25
+- fields: {codigo_video: IU8LC_Ujs_g, fecha: 2012-01-01, imagen: '', titulo: "Vit\xF3\
+      ria Araujo - Kinder ovo de P\xE1scoa", video: 'http://www.youtube.com/watch?v=IU8LC_Ujs_g'}
+  model: trabajo.itemportfolio
+  pk: 31
+- fields: {codigo_video: iTVoAhFhUKY, fecha: 2012-01-01, imagen: '', titulo: Barbie
+      - Princesas, video: 'http://www.youtube.com/watch?v=iTVoAhFhUKY'}
+  model: trabajo.itemportfolio
+  pk: 18
+- fields: {codigo_video: fSFLIeGrSQ8, fecha: 2012-01-01, imagen: '', titulo: Loja
+      Ctis, video: 'http://www.youtube.com/watch?v=fSFLIeGrSQ8'}
+  model: trabajo.itemportfolio
+  pk: 30
+- fields: {codigo_video: coh0a1bZFqw, fecha: 2012-01-01, imagen: '', titulo: Joao
+      Pedro - Mantova Veiculos, video: 'http://www.youtube.com/watch?v=coh0a1bZFqw'}
+  model: trabajo.itemportfolio
+  pk: 29
+- fields: {codigo_video: -PMf9HxUoIw, fecha: 2012-01-01, imagen: '', titulo: Enzo
+      - TVs AOC, video: 'http://www.youtube.com/watch?v=-PMf9HxUoIw'}
+  model: trabajo.itemportfolio
+  pk: 28
+- fields: {codigo_video: px0CtOHPZTU, fecha: 2012-01-01, imagen: '', titulo: "Acrob\xE1\
+      ticas hot wheels", video: 'http://www.youtube.com/watch?v=px0CtOHPZTU&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 26
+- fields: {codigo_video: QJ4BnJeqMA4, fecha: 2012-01-01, imagen: '', titulo: Shopping
+      Parque Dom Pedro Natal, video: 'http://www.youtube.com/watch?v=QJ4BnJeqMA4'}
+  model: trabajo.itemportfolio
+  pk: 20
+- fields: {codigo_video: K940jS1MUzM, fecha: 2011-12-01, imagen: '', titulo: "Ovomaltine,\
+      \ ningu\xE9m duplica!", video: 'http://www.youtube.com/watch?v=K940jS1MUzM'}
+  model: trabajo.itemportfolio
+  pk: 73
+- fields: {codigo_video: k_6jfPoPHmM, fecha: 2009-12-01, imagen: '', titulo: "P\xE3\
+      o de A\xE7\xFAcar Natal", video: 'http://www.youtube.com/watch?v=k_6jfPoPHmM'}
+  model: trabajo.itemportfolio
+  pk: 27
+- fields: {codigo_video: _78-FrYRVk8, fecha: 2009-12-01, imagen: '', titulo: "Ita\xFA\
+      \ - Sinos", video: 'http://www.youtube.com/watch?v=_78-FrYRVk8&feature=player_embedded'}
+  model: trabajo.itemportfolio
+  pk: 22
+- fields: {codigo_video: 4LGfBuT89C4, fecha: 2009-11-01, imagen: '', titulo: 'Tang
+      - Preparou, bebeu, Faz', video: 'http://www.youtube.com/watch?v=4LGfBuT89C4&NR=1'}
+  model: trabajo.itemportfolio
+  pk: 16
+- fields: {codigo_video: spEN_LXAfGE, fecha: 2009-01-01, imagen: '', titulo: Kinder
+      Ovo, video: 'http://www.youtube.com/watch?v=spEN_LXAfGE'}
+  model: trabajo.itemportfolio
+  pk: 21
+- fields: {codigo_video: Y53Te10SUDI, fecha: 2009-01-01, imagen: '', titulo: Rodobens,
+    video: 'http://www.youtube.com/watch?v=Y53Te10SUDI'}
+  model: trabajo.itemportfolio
+  pk: 19
+- fields: {codigo_video: VFGqZZhK2Xg, fecha: 2008-08-01, imagen: '', titulo: Tim -
+      Dia dos Pais, video: 'http://www.youtube.com/watch?v=VFGqZZhK2Xg'}
+  model: trabajo.itemportfolio
+  pk: 4
+- fields: {codigo_video: -_XtlhBd9_A, fecha: 2008-08-01, imagen: '', titulo: 'Lula,
+      o filho do Brasil', video: 'http://www.youtube.com/watch?v=-_XtlhBd9_A'}
+  model: trabajo.itemportfolio
+  pk: 6
+- fields: {codigo_video: 476YTRwNIQQ, fecha: 2008-08-01, imagen: '', titulo: Toddy
+      Funk, video: 'http://www.youtube.com/watch?v=476YTRwNIQQ&feature=related'}
+  model: trabajo.itemportfolio
+  pk: 8
+- fields: {codigo_video: myq6TDU8vfs, fecha: 2008-08-01, imagen: '', titulo: Gol -
+      06 anos, video: 'http://www.youtube.com/watch?v=myq6TDU8vfs'}
+  model: trabajo.itemportfolio
+  pk: 9
+- fields: {codigo_video: _T9_OFX3es0, fecha: 2008-08-01, imagen: '', titulo: "Chevrolet\
+      \ - Redu\xE7\xE3o total", video: 'http://www.youtube.com/watch?v=_T9_OFX3es0'}
+  model: trabajo.itemportfolio
+  pk: 10
+- fields: {codigo_video: HwlhM-1mQ6w, fecha: 2008-08-01, imagen: '', titulo: Prefeitura
+      SP, video: 'http://www.youtube.com/watch?v=HwlhM-1mQ6w'}
+  model: trabajo.itemportfolio
+  pk: 11
+- fields: {codigo_video: Zcrwrwfu_a4, fecha: 2008-08-01, imagen: '', titulo: "Agente\
+      \ Cidad\xE3o", video: 'http://www.youtube.com/watch?v=Zcrwrwfu_a4'}
+  model: trabajo.itemportfolio
+  pk: 13
+- fields: {codigo_video: ntGWTfslAtI, fecha: 2008-08-01, imagen: '', titulo: "Marisa\
+      \ - Dia das Crian\xE7as", video: 'http://www.youtube.com/watch?v=ntGWTfslAtI'}
+  model: trabajo.itemportfolio
+  pk: 12
+- fields: {codigo_video: rpUpic5Mzhg, fecha: 2008-08-01, imagen: '', titulo: Leite
+      Hercules, video: 'http://www.youtube.com/watch?v=rpUpic5Mzhg'}
+  model: trabajo.itemportfolio
+  pk: 7
+- fields: {codigo_video: ibdG-Kd-o8U, fecha: 2008-05-01, imagen: '', titulo: "Botic\xE1\
+      rio - Dia das M\xE3es", video: 'http://www.youtube.com/watch?v=ibdG-Kd-o8U'}
+  model: trabajo.itemportfolio
+  pk: 5
+- fields: {codigo_video: eXC7_rXcX2o, fecha: 2008-05-01, imagen: '', titulo: Tv tribuna
+      de Santos, video: 'http://www.youtube.com/watch?v=eXC7_rXcX2o'}
+  model: trabajo.itemportfolio
+  pk: 3
+- fields: {codigo_video: FXzhRXKa36g, fecha: 2008-05-01, imagen: '', titulo: Habbibs
+      Pica Pau, video: 'http://www.youtube.com/watch?v=FXzhRXKa36g'}
+  model: trabajo.itemportfolio
+  pk: 2
+- fields: {codigo_video: Zun2AQ5L0Qw, fecha: 2008-05-01, imagen: '', titulo: Grendene
+      - Barbie Butterfly Gigi, video: 'http://www.youtube.com/watch?v=Zun2AQ5L0Qw'}
+  model: trabajo.itemportfolio
+  pk: 1

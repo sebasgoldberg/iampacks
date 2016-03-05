@@ -1,0 +1,67 @@
+<VirtualHost *:{{PUERTO_HTTP}}>
+
+    ServerName {{DOMINIO}}
+
+    RewriteEngine On
+    RewriteRule ^/uploads/ - [L]
+    RewriteRule ^(.*)$ https://{{DOMINIO}}:{{PUERTO_HTTPS}}$1
+
+    WSGIDaemonProcess {{AGENCIA}} python-path={{WD_AGENCIA}}
+    WSGIProcessGroup {{AGENCIA}}
+    WSGIScriptAlias / {{WD_AGENCIA}}/alternativa/wsgi.py
+
+    <Directory {{WD_AGENCIA}}/uploads>
+    Order deny,allow
+    Allow from all
+    </Directory>
+
+
+    Alias /static/admin/ /usr/local/lib/python2.7/dist-packages/grappelli/static/admin/
+
+    <Directory /usr/local/lib/python2.7/dist-packages/django/contrib/admin/static/admin >
+    Order deny,allow
+    Allow from all
+    </Directory>
+
+    Alias /static/ {{WD_AGENCIA}}/collectedstatic/
+
+    <Directory {{WD_AGENCIA}}/collectedstatic >
+    Order deny,allow
+    Allow from all
+    </Directory>
+
+    <Directory {{WD_AGENCIA}}/alternativa >
+        <Files wsgi.py>
+            Order allow,deny
+            Allow from all
+        </Files>
+    </Directory>
+
+
+	ScriptAlias /cgi-bin/ /usr/lib/cgi-bin/
+	<Directory "/usr/lib/cgi-bin">
+		AllowOverride None
+		Options +ExecCGI -MultiViews +SymLinksIfOwnerMatch
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+	ErrorLog ${APACHE_LOG_DIR}/error_{{AGENCIA}}.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog ${APACHE_LOG_DIR}/ssl_access_{{AGENCIA}}.log combined
+
+	Alias /doc/ "/usr/share/doc/"
+	<Directory "/usr/share/doc/">
+		Options Indexes MultiViews FollowSymLinks
+		AllowOverride None
+		Order deny,allow
+		Deny from all
+		Allow from 127.0.0.0/255.0.0.0 ::1/128
+	</Directory>
+
+</VirtualHost>
+

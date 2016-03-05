@@ -1,0 +1,129 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-26 10:18-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: forms.py:28 templates/agenciado/form.html:28
+msgid "Dados persoais"
+msgstr "Dados persoais"
+
+#: forms.py:39 templates/agenciado/form.html:38
+msgid "Dados administrativos"
+msgstr "Dados administrativos"
+
+#: forms.py:45 templates/agenciado/form.html:93
+msgid "Habilidades"
+msgstr "Habilidades"
+
+#: views.py:51
+msgid "Dados atualizados com sucesso"
+msgstr "Dados atualizados com sucesso"
+
+#: views.py:89
+msgid "O perfil do trabalho para o qual quer aplicar nao foi encontrado"
+msgstr "O perfil do trabalho para o qual quer aplicar nao foi encontrado"
+
+#: views.py:96
+#, python-format
+msgid ""
+"Para aplicar ao perfil %(rol)s do trabalho <a href=%(url)s>%(trabajo)s</a> "
+"tem que completar seus dados de Agenciado"
+msgstr ""
+"Para aplicar ao perfil %(rol)s do trabalho <a href=%(url)s>%(trabajo)s</a> "
+"tem que completar seus dados de Agenciado"
+
+#: views.py:106
+#, python-format
+msgid "Aplicação para o perfil \"%s\" realizada com sucesso."
+msgstr "Aplicação para o perfil \"%s\" realizada com sucesso."
+
+#: views.py:107
+msgid ""
+"A aplicação vai ser analizada por nosso equipe, muito obrigado por sua "
+"postulação."
+msgstr ""
+"A aplicação vai ser analizada por nosso equipe, muito obrigado por sua "
+"postulação."
+
+#: templates/agenciado/form.html:9
+msgid "Aguarde mientras se envía la información..."
+msgstr "Aguarde enquanto a informação é enviada..."
+
+#: templates/agenciado/form.html:12
+msgid "La información está siendo enviada."
+msgstr "A informação está enviando-se."
+
+#: templates/agenciado/form.html:13
+msgid ""
+"Este proceso puede demorar unos minutos dependiendo del peso de las fotos y "
+"de la velocidad de su conexión a internet"
+msgstr ""
+"Esse processo pode levar algum tempo, dependendo do peso das fotos e da "
+"velocidade de sua conexão de internet"
+
+#: templates/agenciado/form.html:14
+msgid "Una vez finalizado el envío será redirigido nuevamente a su perfil."
+msgstr "Depois de concluído o envio, será redirecionado de volta a seu perfil."
+
+#: templates/agenciado/form.html:22
+msgid "Tem erros por corregir"
+msgstr "Tem erros por corregir"
+
+#: templates/agenciado/form.html:48
+msgid "Dados de endereço"
+msgstr "Dados de endereço"
+
+#: templates/agenciado/form.html:67
+msgid "Telefones"
+msgstr "Telefones"
+
+#: templates/agenciado/form.html:76
+msgid "Caracteristicas fisicas"
+msgstr "Carateristicas fisicas"
+
+#: templates/agenciado/form.html:104
+msgid "Fotos"
+msgstr "Fotos"
+
+#: templates/agenciado/form.html:113
+msgid "Videos"
+msgstr "Videos"
+
+#: templates/agenciado/form.html:122
+msgid "Disponibilidad horaria para trabajos"
+msgstr "Disponibilidade horária para trabalhos"
+
+#: templates/agenciado/form.html:127
+msgid "Trabajos vigentes"
+msgstr "Trabalhos vigêntes"
+
+#: templates/agenciado/form.html:132
+msgid "Trabajos realizados"
+msgstr "Trabalhos realizados"
+
+#: templates/agenciado/form.html:137
+msgid "Otros dados"
+msgstr "Otros dados"
+
+#: templates/agenciado/form.html:150
+msgid "Gravar"
+msgstr "Gravar"
+
+#: templates/agenciado/formset.html:32
+msgid "Agregar"
+msgstr "Adicionar"

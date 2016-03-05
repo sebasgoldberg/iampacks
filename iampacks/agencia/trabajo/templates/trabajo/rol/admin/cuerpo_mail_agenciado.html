@@ -1,0 +1,17 @@
+{% extends 'correo/base.html' %}
+{% load i18n %}
+
+{% block mensaje %}
+
+<p>{% trans "Parabens" %} {{ postulacion.agenciado.nombre }}!</p>
+
+<p>{%blocktrans with trabajo=postulacion.rol.trabajo.titulo perfil=postulacion.rol.descripcion estado=postulacion.descripcion_estado %}Estamos enviando os detalhes referentes ao trabalho "{{ trabajo }}", perfil "{{ perfil }}", onde voce esta postulado com o estado "{{estado}}". {%endblocktrans%}</p>
+
+<h2>{% trans "Dados do trabalho" %}</h2>
+{% include 'trabajo/trabajo/detalles.html' with trabajo=postulacion.rol.trabajo %}
+
+<h2>{% trans "Dados do perfil postulado" %}</h2>
+{% include 'trabajo/rol/detalles.html' with rol=postulacion.rol sin_listado_postulados="true" %}
+
+{%endblock%}
+

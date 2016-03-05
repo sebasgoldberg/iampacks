@@ -1,0 +1,491 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-26 10:20-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: models.py:7 models.py:16 models.py:25 models.py:34 models.py:41
+#: models.py:48 models.py:57 models.py:66 models.py:75
+msgid "Descripção"
+msgstr "Descripción"
+
+#: models.py:12 management/commands/loadperfil.py:40
+#: management/commands/loadperfil.py:60
+msgid "Dança"
+msgstr "Danza"
+
+#: models.py:13
+msgid "Danças"
+msgstr "Danzas"
+
+#: models.py:21
+msgid "Esporte"
+msgstr "Deporte"
+
+#: models.py:22
+msgid "Esportes"
+msgstr "Deportes"
+
+#: models.py:30
+msgid "Estado Dentes"
+msgstr "Estado Dientes"
+
+#: models.py:31
+msgid "Estados Dentes"
+msgstr "Estado Dientes"
+
+#: models.py:53 models.py:54
+msgid "Olhos"
+msgstr "Ojos"
+
+#: models.py:62
+msgid "Cabelo"
+msgstr "Pelo"
+
+#: models.py:63
+msgid "Cabelos"
+msgstr "Pelos"
+
+#: models.py:71
+msgid "Pele"
+msgstr "Piel"
+
+#: models.py:72
+msgid "Peles"
+msgstr "Pieles"
+
+#: models.py:80
+msgid "Manequim"
+msgstr "Tamaño"
+
+#: models.py:81
+msgid "Manequims"
+msgstr "Tamaños"
+
+#: models.py:84
+msgid "Descripción"
+msgstr "Descripción"
+
+#: models.py:89 models.py:90
+msgid "Talle Ropa"
+msgstr "Talle Ropa"
+
+#: management/commands/loadperfil.py:31 management/commands/loadperfil.py:129
+msgid "Castanho"
+msgstr "Castaño"
+
+#: management/commands/loadperfil.py:32 management/commands/loadperfil.py:130
+msgid "Castanho Claro"
+msgstr "Castaño Claro"
+
+#: management/commands/loadperfil.py:33
+msgid "Grisalho"
+msgstr "Canoso"
+
+#: management/commands/loadperfil.py:34
+msgid "Loiro"
+msgstr "Ruvio"
+
+#: management/commands/loadperfil.py:35 management/commands/loadperfil.py:131
+msgid "Preto"
+msgstr "Morocho"
+
+#: management/commands/loadperfil.py:36
+msgid "Preto Claro"
+msgstr "Castaño oscuro"
+
+#: management/commands/loadperfil.py:37
+msgid "Ruiva"
+msgstr "Pelirrojo"
+
+#: management/commands/loadperfil.py:39
+msgid "Ballet"
+msgstr "Ballet"
+
+#: management/commands/loadperfil.py:41
+msgid "Dança de Rua"
+msgstr "Danza de calle"
+
+#: management/commands/loadperfil.py:42
+msgid "Hip Hop"
+msgstr "Hip Hop"
+
+#: management/commands/loadperfil.py:43
+msgid "Jazz"
+msgstr "Jazz"
+
+#: management/commands/loadperfil.py:44
+msgid "Sapateado"
+msgstr "Zapateo"
+
+#: management/commands/loadperfil.py:45
+msgid "Street Dance"
+msgstr "Street Dance"
+
+#: management/commands/loadperfil.py:46
+msgid "Ventre"
+msgstr "Vientre"
+
+#: management/commands/loadperfil.py:47
+msgid "Gafieira"
+msgstr "Gafieira"
+
+#: management/commands/loadperfil.py:49
+msgid "Aeróbica"
+msgstr "Aeróbica"
+
+#: management/commands/loadperfil.py:50
+msgid "Anda a Cavalo"
+msgstr "Monta a caballo"
+
+#: management/commands/loadperfil.py:51
+msgid "Atletismo"
+msgstr "Atletismo"
+
+#: management/commands/loadperfil.py:52
+msgid "Ator"
+msgstr "Actor"
+
+#: management/commands/loadperfil.py:53
+msgid "Basquete"
+msgstr "Basquet"
+
+#: management/commands/loadperfil.py:54
+msgid "Bicicleta"
+msgstr "Bicicleta"
+
+#: management/commands/loadperfil.py:55
+msgid "Boliche"
+msgstr "Bolos"
+
+#: management/commands/loadperfil.py:56
+msgid "Capoeira"
+msgstr "Capoeira"
+
+#: management/commands/loadperfil.py:57
+msgid "Cavalgar"
+msgstr "Cabalgar"
+
+#: management/commands/loadperfil.py:58
+msgid "Ciclismo"
+msgstr "Ciclismo"
+
+#: management/commands/loadperfil.py:59
+msgid "Corrida c/ obstáculo"
+msgstr "Carrera c/ obstáculos"
+
+#: management/commands/loadperfil.py:61
+msgid "Futebol"
+msgstr "Futbol"
+
+#: management/commands/loadperfil.py:62
+msgid "Futsal"
+msgstr "Futbol de salón"
+
+#: management/commands/loadperfil.py:63
+msgid "Ginastica Artistica"
+msgstr "Gimnasia Artística"
+
+#: management/commands/loadperfil.py:64
+msgid "Ginastica Acrobática"
+msgstr "Gimnasia Acrobática"
+
+#: management/commands/loadperfil.py:65
+msgid "Ginastica Olimpica"
+msgstr "Gimnasia Olímpica"
+
+#: management/commands/loadperfil.py:66
+msgid "Ginastica Ritmica"
+msgstr "Gimnasia Rítmica"
+
+#: management/commands/loadperfil.py:67
+msgid "Handeboll"
+msgstr "Handball"
+
+#: management/commands/loadperfil.py:68
+msgid "Judo"
+msgstr "Judo"
+
+#: management/commands/loadperfil.py:69
+msgid "Karate"
+msgstr "Karate"
+
+#: management/commands/loadperfil.py:70
+msgid "Kung-fu"
+msgstr "Kung-fu"
+
+#: management/commands/loadperfil.py:71
+msgid "Locução"
+msgstr "Locución"
+
+#: management/commands/loadperfil.py:72
+msgid "Maaythay"
+msgstr "Maaythay"
+
+#: management/commands/loadperfil.py:73
+msgid "Natação"
+msgstr "Natación"
+
+#: management/commands/loadperfil.py:74
+msgid "Patinação Artística"
+msgstr "Patinaje Artístico"
+
+#: management/commands/loadperfil.py:75
+msgid "Patins"
+msgstr "Patines"
+
+#: management/commands/loadperfil.py:76
+msgid "Power Jump"
+msgstr "Power Jump"
+
+#: management/commands/loadperfil.py:77
+msgid "Rooler"
+msgstr "Roolers"
+
+#: management/commands/loadperfil.py:78
+msgid "samba"
+msgstr "Samba"
+
+#: management/commands/loadperfil.py:79
+msgid "Skate"
+msgstr "Skate"
+
+#: management/commands/loadperfil.py:80
+msgid "streetdance"
+msgstr "Street Dance"
+
+#: management/commands/loadperfil.py:81
+msgid "Surf"
+msgstr "Surf"
+
+#: management/commands/loadperfil.py:82
+msgid "Taekondo"
+msgstr "Taekwondo"
+
+#: management/commands/loadperfil.py:83
+msgid "Teatro"
+msgstr "Teatro"
+
+#: management/commands/loadperfil.py:84
+msgid "Tenis"
+msgstr "Tenis"
+
+#: management/commands/loadperfil.py:85
+msgid "Vôlei"
+msgstr "Volei"
+
+#: management/commands/loadperfil.py:87
+msgid "Bom"
+msgstr "Bien"
+
+#: management/commands/loadperfil.py:88
+msgid "Sem informação"
+msgstr "Sin Información"
+
+#: management/commands/loadperfil.py:90
+msgid "Alemao"
+msgstr "Alemán"
+
+#: management/commands/loadperfil.py:91
+msgid "Chino"
+msgstr "Chino"
+
+#: management/commands/loadperfil.py:92
+msgid "Espanhol"
+msgstr "Español"
+
+#: management/commands/loadperfil.py:93
+msgid "Francês"
+msgstr "Frances"
+
+#: management/commands/loadperfil.py:94
+msgid "Inglês"
+msgstr "Ingles"
+
+#: management/commands/loadperfil.py:95
+msgid "Inglês intermediario"
+msgstr "Ingles intermedio"
+
+#: management/commands/loadperfil.py:96
+msgid "Italiano"
+msgstr "Italiano"
+
+#: management/commands/loadperfil.py:97
+msgid "Japones"
+msgstr "Japonés"
+
+#: management/commands/loadperfil.py:99
+msgid "Acordeon"
+msgstr "Acordeón"
+
+#: management/commands/loadperfil.py:100
+msgid "Agogo"
+msgstr "Agogo"
+
+#: management/commands/loadperfil.py:101
+msgid "Birimbal"
+msgstr "Birimbal"
+
+#: management/commands/loadperfil.py:102
+msgid "Canto"
+msgstr "Canto"
+
+#: management/commands/loadperfil.py:103
+msgid "Chocalho"
+msgstr "Maracas"
+
+#: management/commands/loadperfil.py:104
+msgid "Escaleta"
+msgstr "Melódica"
+
+#: management/commands/loadperfil.py:105
+msgid "Flauta"
+msgstr "Flauta"
+
+#: management/commands/loadperfil.py:106
+msgid "Lira"
+msgstr "Lira"
+
+#: management/commands/loadperfil.py:107
+msgid "Orgão"
+msgstr "Organo"
+
+#: management/commands/loadperfil.py:108
+msgid "Pandeiro"
+msgstr "Pandereta"
+
+#: management/commands/loadperfil.py:109
+msgid "Percussão"
+msgstr "Percución"
+
+#: management/commands/loadperfil.py:110
+msgid "Piano"
+msgstr "Piano"
+
+#: management/commands/loadperfil.py:111
+msgid "Sino"
+msgstr "Campana"
+
+#: management/commands/loadperfil.py:112
+msgid "Tambor"
+msgstr "Tambor"
+
+#: management/commands/loadperfil.py:113
+msgid "Teclado"
+msgstr "Teclado"
+
+#: management/commands/loadperfil.py:114
+msgid "Timba"
+msgstr "Timba"
+
+#: management/commands/loadperfil.py:115
+msgid "Triângulo"
+msgstr "Triangulo"
+
+#: management/commands/loadperfil.py:116
+msgid "Trompete"
+msgstr "Trompeta"
+
+#: management/commands/loadperfil.py:117
+msgid "Violão"
+msgstr "Guitarra"
+
+#: management/commands/loadperfil.py:118
+msgid "Violino"
+msgstr "Violín"
+
+#: management/commands/loadperfil.py:120
+msgid "Robusta"
+msgstr "Robusta"
+
+#: management/commands/loadperfil.py:121
+msgid "Gordo"
+msgstr "Gordo"
+
+#: management/commands/loadperfil.py:122
+msgid "Magro"
+msgstr "Flaco"
+
+#: management/commands/loadperfil.py:123
+msgid "Atletica"
+msgstr "Atletica"
+
+#: management/commands/loadperfil.py:124
+msgid "Musculosa"
+msgstr "Musculosa"
+
+#: management/commands/loadperfil.py:125
+msgid "Normal"
+msgstr "Normal"
+
+#: management/commands/loadperfil.py:127
+msgid "Azul"
+msgstr "Azul"
+
+#: management/commands/loadperfil.py:128
+msgid "Bermelhos"
+msgstr "Rojos"
+
+#: management/commands/loadperfil.py:132
+msgid "Verdes"
+msgstr "Verdes"
+
+#: management/commands/loadperfil.py:134
+msgid "Branca"
+msgstr "Blanca"
+
+#: management/commands/loadperfil.py:135
+msgid "Morena"
+msgstr "Morena"
+
+#: management/commands/loadperfil.py:136
+msgid "Negra"
+msgstr "Negra"
+
+#: management/commands/loadperfil.py:137
+msgid "Oriental"
+msgstr "Oriental"
+
+#: management/commands/loadperfil.py:138
+msgid "Parda"
+msgstr "Trigueña"
+
+#: management/commands/loadperfil.py:140
+msgid "PP"
+msgstr "XS"
+
+#: management/commands/loadperfil.py:141
+msgid "P"
+msgstr "S"
+
+#: management/commands/loadperfil.py:142
+msgid "M"
+msgstr "M"
+
+#: management/commands/loadperfil.py:143
+msgid "G"
+msgstr "L"
+
+#: management/commands/loadperfil.py:144
+msgid "GG"
+msgstr "XL"
+
+#~ msgid "Guitara"
+#~ msgstr "Guitarra"
+
+#~ msgid "Flaco"
+#~ msgstr "Flaco"

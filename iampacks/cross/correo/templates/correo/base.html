@@ -1,0 +1,11 @@
+{% block mensaje %}
+  {%if cuerpo%}
+<pre>
+{{cuerpo}}
+</pre>
+  {%endif%}
+{% endblock %}
+
+{% block firma %}
+{%include 'correo/firma.html'%}
+{% endblock %}

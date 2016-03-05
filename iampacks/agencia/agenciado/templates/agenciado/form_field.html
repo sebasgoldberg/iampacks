@@ -1,0 +1,9 @@
+{% if not field.is_hidden %}
+  <div class="{{layout}}">
+    {{ field.label_tag }} 
+    {% if field.errors %}<div class='error'>{{ field.errors }}</div>{% endif %}
+    {{ field }}
+  </div>
+{% else %}
+  {{ field }}
+{% endif %}

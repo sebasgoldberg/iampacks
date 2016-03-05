@@ -1,0 +1,31 @@
+{% load i18n %}
+<h3>{% trans "Perfil" %}: {{rol.descripcion}}</h3>
+<ul>
+  <li><strong>{% trans "Cache" %}:</strong> {{rol.cache|floatformat:2}} {{rol.moneda}}</li>
+  <li><strong>{% trans "Caraterísticas" %}:</strong> {{rol.caracteristicas}}</li>
+  <li><h4>{% trans "Eventos do perfil" %}</h4>
+    <ul>
+      {% for evento in rol.eventorol_set.all %}
+        <li>{{ evento }}</li>
+      {% empty %}
+        <li>{% trans "Este perfil não tem eventos registrados" %}</li>
+      {% endfor %}
+    </ul>
+  </li>
+
+  {% if sin_listado_postulados %}
+  {% else %}
+    <li><h4>{% trans "Postulações" %}</h4>
+      <ul style='list-style:none;'>
+        {% for postulacion in rol.postulacion_set.all %}
+          <li>
+            {% autoescape off %}{{postulacion.agenciado.thumbnails_absolute_uri}}{%endautoescape%} {{postulacion.agenciado}} - {{postulacion.descripcion_estado}}
+          </li>
+        {% empty %}
+          <li>{% trans "Este perfil não tem postulações registradas" %}</li>
+        {% endfor %}
+      </ul>
+    </li>
+  {% endif %}
+
+</ul>

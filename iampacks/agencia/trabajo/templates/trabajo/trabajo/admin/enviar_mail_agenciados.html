@@ -1,0 +1,61 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static admin_modify %}
+{% load formadmin_filters %}
+
+{% block extrahead %}
+  {{ block.super }}
+    {{ media }}
+  {{ form.media }}
+{% endblock %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
+  <style type="text/css"> 
+    .asunto_mail {
+      width: 60em!Important;
+      } 
+  </style> 
+{% endblock %}
+
+{% block coltype %}
+  {% if ordered_objects %}colMS{% else %}colM{% endif %}
+{% endblock %}
+
+{% block title %}{%blocktrans with productora=trabajo.productora%}Envio de trabalho "{{trabajo}}" a agenciados{%endblocktrans%}} | {{ agencia.nombre }}{% endblock %}
+
+{% block breadcrumbs %}
+        <ul>
+            <li><a href="{% url 'admin:index' %}">{% trans "Home" %}</a></li>
+  <li><a href="/admin/trabajo/">{% trans "Trabalho" %}</a></li>
+  <li><a href="/admin/trabajo/trabajo/">{% trans "Trabalhos" %}</a></li>
+  <li><a href="/admin/trabajo/trabajo/{{trabajo.id}}/">{{trabajo}}</a></li>
+  <li>{%blocktrans %}Envio de trabalho "{{ trabajo }}" a agenciados postulados{%endblocktrans%}</li>
+        </ul>
+{% endblock %}
+
+{% block content %}
+
+            <!-- CONTENT TITLE -->
+<header id="grp-content-title">
+  <h1>{% trans "Verifique que o conteudo a enviar é correto (exemplo para um agenciado)" %}:</h1>
+</header>
+
+      <form action="/trabajo/trabajo/enviar/mail/agenciados/{{ trabajo.id }}/" method="post">
+        {% csrf_token %}
+        {{ form|as_django_admin }}
+<footer class="grp-module grp-submit-row grp-fixed-footer">
+    <header style="display:none"><h1>Submit Options</h1></header>
+      <ul>
+          <li><input type="submit" name="submit" class="grp-button" value="{% trans "Enviar" %}" /></li>
+      </ul>
+</footer>
+
+      </form>
+
+<header id="grp-content-title">
+  <h1>{% trans "Exemplo de conteudo do e-mail" %}:</h1>
+</header>
+{% include 'trabajo/rol/admin/cuerpo_mail_agenciado.html' with postulacion=trabajo.rol_set.first.postulacion_set.first %}
+
+{% endblock %}

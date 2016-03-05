@@ -1,0 +1,75 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-26 09:43-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: models.py:12
+msgid "Lunes"
+msgstr "Lunes"
+
+#: models.py:13
+msgid "Martes"
+msgstr "Martes"
+
+#: models.py:14
+msgid "Miércoles"
+msgstr "Miércoles"
+
+#: models.py:15
+msgid "Jueves"
+msgstr "Jueves"
+
+#: models.py:16
+msgid "Viernes"
+msgstr "Viernes"
+
+#: models.py:17
+msgid "Sábado"
+msgstr "Sábado"
+
+#: models.py:18
+msgid "Domingo"
+msgstr "Domingo"
+
+#: models.py:22
+msgid "Día desde"
+msgstr "Día desde"
+
+#: models.py:23
+msgid "Día hasta"
+msgstr "Día hasta"
+
+#: models.py:24
+msgid "Hora desde"
+msgstr "Hora desde"
+
+#: models.py:25
+msgid "Hora hasta"
+msgstr "Hora hasta"
+
+#: models.py:29
+msgid "La hora desde debe ser menor a la hora hasta."
+msgstr "La hora desde debe ser menor a la hora hasta."
+
+#: models.py:33
+msgid "Disponibilidad"
+msgstr "Disponibilidad"
+
+#: models.py:34
+msgid "Disponibilidades"
+msgstr "Disponibilidades"

@@ -1,0 +1,49 @@
+{% extends "admin/change_form.html" %}
+{% load i18n %}
+
+{% block title %} 
+  {%blocktrans with rol=rol.descripcion trabajo=rol.trabajo.titulo %}Resultado de adicionar agenciados selecionados a perfil {{ rol }} de trabalho {{ trabajo }}{%endblocktrans%} | {{ agencia.nombre }}
+{% endblock %}
+
+
+{% block breadcrumbs %}
+        {% trans "Adicionar agenciados selecionados a perfil de trabalho" as titulo_accion %}
+        <ul>
+            <li><a href="{% url 'admin:index' %}">{% trans "Home" %}</a></li>
+            <li><a href="/admin/agencia/">{% trans "Agencia" %}</a></li>
+            <li><a href="/admin/agencia/agenciado/">{% trans "Agenciados" %}</a></li>
+            <li>{%blocktrans with rol=rol.descripcion trabajo=rol.trabajo.titulo %}Resultado de adicionar agenciados selecionados a perfil {{ rol }} de trabalho {{ trabajo }}{%endblocktrans%} </li>
+        </ul>
+{% endblock %}
+
+
+{% block content %}
+
+<header id="grp-content-title">
+  <h1>
+    {%blocktrans with rol=rol.admin_link|safe %}Agenciados adicionados com exito ao perfil "{{rol}}" com estado "{{estado}}"{%endblocktrans%}:
+  </h1>
+</header>
+
+<ul>
+  {% for postulacion in postulaciones_realizadas_con_exito %}
+    <li>{{ postulacion.agenciado.admin_link|safe }}</li>
+  {% empty %}
+    <li>{% trans "Nao foi posibel adicionar nenhum agenciado" %}</li>
+  {% endfor %}
+</ul>
+
+{% if postulaciones_ya_existentes %}
+<header id="grp-content-title">
+  <h1>
+    {%blocktrans with rol=rol.admin_link|safe %}Agenciados ja existentes em perfil "{{rol}}" (se indica o estado atual para cada postulação existente){%endblocktrans%}:
+  </h1>
+</header>
+  <ul>
+    {% for postulacion in postulaciones_ya_existentes %}
+      <li>{{ postulacion.agenciado.admin_link|safe }} ({{postulacion.descripcion_estado}})</li>
+    {% endfor %}
+  </ul>
+{% endif %}
+
+{% endblock %}

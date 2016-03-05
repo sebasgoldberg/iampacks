@@ -1,0 +1,65 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-04 09:38-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+
+#: models.py:84
+msgid "Pago"
+msgstr ""
+
+#: models.py:85
+msgid "Pagos"
+msgstr ""
+
+#: models.py:89
+msgid "Descripción"
+msgstr ""
+
+#: models.py:99
+msgid "Peso argentino"
+msgstr ""
+
+#: models.py:100
+msgid "Dólar estadounidense"
+msgstr ""
+
+#: models.py:101
+msgid "Real"
+msgstr ""
+
+#: models.py:102
+msgid "Peso Mexicano"
+msgstr ""
+
+#: models.py:103
+msgid "Bolívar fuerte"
+msgstr ""
+
+#: models.py:108
+msgid "Moneda"
+msgstr ""
+
+#: models.py:109
+msgid "Precio unitario"
+msgstr ""
+
+#: templates/mercadopago/boton_para_formulario_pago.html:3
+#: templates/mercadopago/formulario_pago.html:25
+#: templates/mercadopago/link_para_formulario_pago.html:3
+msgid "Pagar"
+msgstr ""

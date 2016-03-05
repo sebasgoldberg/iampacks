@@ -1,0 +1,60 @@
+- model: agencia.Ciudad
+  pk: 1
+  fields:
+    descripcion: Ciudad 1
+
+- model: agencia.Danza
+  pk: 1
+  fields:
+    descripcion: Danza 1
+
+- model: agencia.Deporte
+  pk: 1
+  fields:
+    descripcion: Deporte 1
+
+- model: agencia.Estado
+  pk: 1
+  fields:
+    descripcion: Estado 1
+
+- model: agencia.EstadoDientes
+  pk: 1
+  fields:
+    descripcion: EstadoDientes 1
+
+- model: agencia.Idioma
+  pk: 1
+  fields:
+    descripcion: Idioma 1
+
+- model: agencia.Instrumento
+  pk: 1
+  fields:
+    descripcion: Instrumento 1
+
+- model: agencia.Ojos
+  pk: 1
+  fields:
+    descripcion: Ojos 1
+
+- model: agencia.Pelo
+  pk: 1
+  fields:
+    descripcion: Pelo 1
+
+- model: agencia.Piel
+  pk: 1
+  fields:
+    descripcion: Piel 1
+
+- model: agencia.Talle
+  pk: 1
+  fields:
+    descripcion: Talle 1
+
+- model: agencia.Compania
+  pk: 1
+  fields:
+    descripcion: Compania 1
+

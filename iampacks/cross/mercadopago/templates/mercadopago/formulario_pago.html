@@ -1,0 +1,27 @@
+{% load i18n %}
+
+<form {%if no_display%}style='display:none;'{%endif%} action="https://www.mercadopago.com/checkout/init" method="post" enctype="application/x-www-form-urlencoded" target="" id="{{pago.form_id}}">
+  <!-- Autenticación y hash MD5 -->
+  <input type="hidden" name="client_id" value="{{pago.client_id}}"/>
+  <input type="hidden" name="md5" value="{{pago.md5}}"/>
+
+  <!-- Datos obligatorios del item -->
+  <input type="hidden" name="item_title" value="{{pago.item_title}}"/>
+  <input type="hidden" name="item_quantity" value="{{pago.item_quantity}}"/>
+  <input type="hidden" name="item_currency_id" value="{{pago.item_currency_id}}"/>
+  <input type="hidden" name="item_unit_price" value="{{pago.item_unit_price_as_str}}"/>
+
+  <!-- Datos opcionales -->
+  <input type="hidden" name="item_id" value="{{pago.item_id}}"/>
+  <input type="hidden" name="external_reference" value="{{pago.external_reference}}"/>
+  <input type="hidden" name="item_picture_url" value="{{pago.item_picture_url}}"/>
+  <input type="hidden" name="payer_name" value="{{pago.payer_name}}"/>
+  <input type="hidden" name="payer_surname" value="{{pago.payer_surname}}"/>
+  <input type="hidden" name="payer_email" value="{{pago.payer_email}}"/>
+  <input type="hidden" name="back_url_success" value="{{pago.back_url_success}}"/>
+  <input type="hidden" name="back_url_pending" value="{{pago.back_url_pending}}"/>
+
+  <!-- Boton de pago -->
+  <button class="btn btn-success" name="MP-Checkout" >{% trans "Pagar" %}</button>
+</form>
+

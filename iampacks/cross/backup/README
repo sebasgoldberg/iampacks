@@ -1,0 +1,12 @@
+Configuración
+-------------
+1) Deben estar configuradas las siguientes opciones:
+  settings.AMBIENTE.db.user
+  settings.AMBIENTE.db.password
+  settings.AMBIENTE.db.name
+  settings.AMBIENTE.project_directory
+  settings.AMBIENTE.backup.user
+  settings.AMBIENTE.backup.host
+  settings.AMBIENTE.backup.destination
+2) Debe estar creada la clave publica en el servidor del proyecto, normalmente generada en ~/.ssh/id_rsa.pub: ./ssh-keygen
+3) Debe estar registrada dicha clave publica en el servidor de backup, normalmente se registra en ~/.ssh/authorized_keys 

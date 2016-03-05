@@ -1,0 +1,384 @@
+- fields: {descripcion: Ballet}
+  model: perfil.danza
+  pk: 3
+- fields: {descripcion: "Dan\xE7a"}
+  model: perfil.danza
+  pk: 4
+- fields: {descripcion: "Dan\xE7a de Rua"}
+  model: perfil.danza
+  pk: 8
+- fields: {descripcion: Hip Hop}
+  model: perfil.danza
+  pk: 7
+- fields: {descripcion: Jazz}
+  model: perfil.danza
+  pk: 2
+- fields: {descripcion: Sapateado}
+  model: perfil.danza
+  pk: 1
+- fields: {descripcion: Street Dance}
+  model: perfil.danza
+  pk: 5
+- fields: {descripcion: Ventre}
+  model: perfil.danza
+  pk: 6
+- fields: {descripcion: "Aer\xF3bica"}
+  model: perfil.deporte
+  pk: 36
+- fields: {descripcion: Anda a Cavalo}
+  model: perfil.deporte
+  pk: 37
+- fields: {descripcion: Atletismo}
+  model: perfil.deporte
+  pk: 12
+- fields: {descripcion: Ator}
+  model: perfil.deporte
+  pk: 25
+- fields: {descripcion: Basquete}
+  model: perfil.deporte
+  pk: 14
+- fields: {descripcion: Bicicleta}
+  model: perfil.deporte
+  pk: 17
+- fields: {descripcion: Boliche}
+  model: perfil.deporte
+  pk: 27
+- fields: {descripcion: Capoeira}
+  model: perfil.deporte
+  pk: 4
+- fields: {descripcion: Cavalgar}
+  model: perfil.deporte
+  pk: 26
+- fields: {descripcion: Ciclismo}
+  model: perfil.deporte
+  pk: 13
+- fields: {descripcion: "Corrida c/ obst\xE1culo"}
+  model: perfil.deporte
+  pk: 32
+- fields: {descripcion: "Dan\xE7a"}
+  model: perfil.deporte
+  pk: 2
+- fields: {descripcion: "Desenho Art\xEDstico"}
+  model: perfil.deporte
+  pk: 38
+- fields: {descripcion: Futebol}
+  model: perfil.deporte
+  pk: 3
+- fields: {descripcion: Futsal}
+  model: perfil.deporte
+  pk: 29
+- fields: {descripcion: Ginastica  Artistica}
+  model: perfil.deporte
+  pk: 10
+- fields: {descripcion: "Ginastica Acrob\xE1tica"}
+  model: perfil.deporte
+  pk: 30
+- fields: {descripcion: Ginastica Olimpica}
+  model: perfil.deporte
+  pk: 7
+- fields: {descripcion: Ginastica Ritmica}
+  model: perfil.deporte
+  pk: 6
+- fields: {descripcion: Handeboll}
+  model: perfil.deporte
+  pk: 20
+- fields: {descripcion: Judo}
+  model: perfil.deporte
+  pk: 5
+- fields: {descripcion: Karate}
+  model: perfil.deporte
+  pk: 15
+- fields: {descripcion: Kung-fu}
+  model: perfil.deporte
+  pk: 24
+- fields: {descripcion: "Locu\xE7\xE3o"}
+  model: perfil.deporte
+  pk: 18
+- fields: {descripcion: Maaythay}
+  model: perfil.deporte
+  pk: 31
+- fields: {descripcion: "Nata\xE7\xE3o"}
+  model: perfil.deporte
+  pk: 1
+- fields: {descripcion: Paraquedismo}
+  model: perfil.deporte
+  pk: 40
+- fields: {descripcion: "Patina\xE7\xE3o Art\xEDstica"}
+  model: perfil.deporte
+  pk: 22
+- fields: {descripcion: Patins}
+  model: perfil.deporte
+  pk: 21
+- fields: {descripcion: Power Jump}
+  model: perfil.deporte
+  pk: 16
+- fields: {descripcion: Rooler}
+  model: perfil.deporte
+  pk: 23
+- fields: {descripcion: samba}
+  model: perfil.deporte
+  pk: 33
+- fields: {descripcion: Sapateado}
+  model: perfil.deporte
+  pk: 39
+- fields: {descripcion: Skate}
+  model: perfil.deporte
+  pk: 19
+- fields: {descripcion: streetdance}
+  model: perfil.deporte
+  pk: 35
+- fields: {descripcion: Surf}
+  model: perfil.deporte
+  pk: 28
+- fields: {descripcion: Taekondo}
+  model: perfil.deporte
+  pk: 34
+- fields: {descripcion: Teatro}
+  model: perfil.deporte
+  pk: 8
+- fields: {descripcion: Tenis}
+  model: perfil.deporte
+  pk: 11
+- fields: {descripcion: Tiro ao alvo}
+  model: perfil.deporte
+  pk: 41
+- fields: {descripcion: "V\xF4lei"}
+  model: perfil.deporte
+  pk: 9
+- fields: {descripcion: aparelho}
+  model: perfil.estadodientes
+  pk: 4
+- fields: {descripcion: Bom}
+  model: perfil.estadodientes
+  pk: 1
+- fields: {descripcion: regular}
+  model: perfil.estadodientes
+  pk: 3
+- fields: {descripcion: "Sem informa\xE7\xE3o"}
+  model: perfil.estadodientes
+  pk: 2
+- fields: {descripcion: Alemao}
+  model: perfil.idioma
+  pk: 3
+- fields: {descripcion: Arabe}
+  model: perfil.idioma
+  pk: 11
+- fields: {descripcion: Chines}
+  model: perfil.idioma
+  pk: 12
+- fields: {descripcion: Espanhol}
+  model: perfil.idioma
+  pk: 2
+- fields: {descripcion: "Franc\xEAs"}
+  model: perfil.idioma
+  pk: 5
+- fields: {descripcion: Gafieira}
+  model: perfil.idioma
+  pk: 8
+- fields: {descripcion: Grego}
+  model: perfil.idioma
+  pk: 14
+- fields: {descripcion: Hebraico}
+  model: perfil.idioma
+  pk: 15
+- fields: {descripcion: "Ingl\xEAs"}
+  model: perfil.idioma
+  pk: 7
+- fields: {descripcion: "Ingl\xEAs Inicial"}
+  model: perfil.idioma
+  pk: 1
+- fields: {descripcion: "Ingl\xEAs intermediario"}
+  model: perfil.idioma
+  pk: 9
+- fields: {descripcion: Italiano}
+  model: perfil.idioma
+  pk: 6
+- fields: {descripcion: Japones}
+  model: perfil.idioma
+  pk: 4
+- fields: {descripcion: Latin}
+  model: perfil.idioma
+  pk: 16
+- fields: {descripcion: Libras}
+  model: perfil.idioma
+  pk: 13
+- fields: {descripcion: Russo}
+  model: perfil.idioma
+  pk: 10
+- fields: {descripcion: Acordeon}
+  model: perfil.instrumento
+  pk: 23
+- fields: {descripcion: Agogo}
+  model: perfil.instrumento
+  pk: 11
+- fields: {descripcion: Baixo}
+  model: perfil.instrumento
+  pk: 22
+- fields: {descripcion: Bateria}
+  model: perfil.instrumento
+  pk: 1
+- fields: {descripcion: Birimbal}
+  model: perfil.instrumento
+  pk: 7
+- fields: {descripcion: Canto}
+  model: perfil.instrumento
+  pk: 2
+- fields: {descripcion: Chocalho}
+  model: perfil.instrumento
+  pk: 19
+- fields: {descripcion: escaleta}
+  model: perfil.instrumento
+  pk: 17
+- fields: {descripcion: Flauta}
+  model: perfil.instrumento
+  pk: 4
+- fields: {descripcion: Guitara}
+  model: perfil.instrumento
+  pk: 13
+- fields: {descripcion: Lira}
+  model: perfil.instrumento
+  pk: 15
+- fields: {descripcion: "Org\xE3o"}
+  model: perfil.instrumento
+  pk: 9
+- fields: {descripcion: Pandeiro}
+  model: perfil.instrumento
+  pk: 10
+- fields: {descripcion: "Percuss\xE3o"}
+  model: perfil.instrumento
+  pk: 18
+- fields: {descripcion: Piano}
+  model: perfil.instrumento
+  pk: 8
+- fields: {descripcion: Sino}
+  model: perfil.instrumento
+  pk: 21
+- fields: {descripcion: Tambor}
+  model: perfil.instrumento
+  pk: 12
+- fields: {descripcion: Teclado}
+  model: perfil.instrumento
+  pk: 3
+- fields: {descripcion: Timba}
+  model: perfil.instrumento
+  pk: 14
+- fields: {descripcion: "Tri\xE2ngulo"}
+  model: perfil.instrumento
+  pk: 20
+- fields: {descripcion: Trompete}
+  model: perfil.instrumento
+  pk: 16
+- fields: {descripcion: "Viol\xE3o"}
+  model: perfil.instrumento
+  pk: 5
+- fields: {descripcion: Violino}
+  model: perfil.instrumento
+  pk: 6
+- fields: {descripcion: Azul}
+  model: perfil.ojos
+  pk: 1
+- fields: {descripcion: Castanho}
+  model: perfil.ojos
+  pk: 2
+- fields: {descripcion: Castanho Claro}
+  model: perfil.ojos
+  pk: 5
+- fields: {descripcion: Preto}
+  model: perfil.ojos
+  pk: 3
+- fields: {descripcion: Verdes}
+  model: perfil.ojos
+  pk: 4
+- fields: {descripcion: Branco}
+  model: perfil.pelo
+  pk: 7
+- fields: {descripcion: Castanho}
+  model: perfil.pelo
+  pk: 3
+- fields: {descripcion: Castanho Claro}
+  model: perfil.pelo
+  pk: 2
+- fields: {descripcion: Grisalho}
+  model: perfil.pelo
+  pk: 1
+- fields: {descripcion: Loiro}
+  model: perfil.pelo
+  pk: 6
+- fields: {descripcion: Preto}
+  model: perfil.pelo
+  pk: 4
+- fields: {descripcion: Ruiva}
+  model: perfil.pelo
+  pk: 5
+- fields: {descripcion: Branca}
+  model: perfil.piel
+  pk: 1
+- fields: {descripcion: Morena}
+  model: perfil.piel
+  pk: 4
+- fields: {descripcion: Negra}
+  model: perfil.piel
+  pk: 2
+- fields: {descripcion: Oriental}
+  model: perfil.piel
+  pk: 5
+- fields: {descripcion: Parda}
+  model: perfil.piel
+  pk: 3
+- fields: {descripcion: '00'}
+  model: perfil.talle
+  pk: 16
+- fields: {descripcion: '01'}
+  model: perfil.talle
+  pk: 17
+- fields: {descripcion: '02'}
+  model: perfil.talle
+  pk: 1
+- fields: {descripcion: '03'}
+  model: perfil.talle
+  pk: 4
+- fields: {descripcion: '04'}
+  model: perfil.talle
+  pk: 2
+- fields: {descripcion: '06'}
+  model: perfil.talle
+  pk: 5
+- fields: {descripcion: 08}
+  model: perfil.talle
+  pk: 3
+- fields: {descripcion: '10'}
+  model: perfil.talle
+  pk: 7
+- fields: {descripcion: '12'}
+  model: perfil.talle
+  pk: 6
+- fields: {descripcion: '14'}
+  model: perfil.talle
+  pk: 10
+- fields: {descripcion: '16'}
+  model: perfil.talle
+  pk: 8
+- fields: {descripcion: '18'}
+  model: perfil.talle
+  pk: 9
+- fields: {descripcion: '34'}
+  model: perfil.talle
+  pk: 13
+- fields: {descripcion: '36'}
+  model: perfil.talle
+  pk: 12
+- fields: {descripcion: '38'}
+  model: perfil.talle
+  pk: 11
+- fields: {descripcion: '40'}
+  model: perfil.talle
+  pk: 15
+- fields: {descripcion: '42'}
+  model: perfil.talle
+  pk: 14
+- fields: {descripcion: '44'}
+  model: perfil.talle
+  pk: 18
+- fields: {descripcion: '46'}
+  model: perfil.talle
+  pk: 19

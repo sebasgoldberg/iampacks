@@ -1,0 +1,45 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static admin_modify %}
+{% load formadmin_filters %}
+
+{% block extrastyle %}
+  {{ block.super }}
+  <link rel="stylesheet" type="text/css" href="{% static "admin/css/forms.css" %}" />
+  <style type="text/css"> 
+    .asunto_mail {
+      width: 60em!Important;
+      } 
+  </style> 
+{% endblock %}
+
+{% block title %}{%blocktrans%}Envio de mail a agenciados{%endblocktrans%}} | {{ agencia.nombre }}{% endblock %}
+
+{% block breadcrumbs %}
+        <ul>
+            <li><a href="{% url 'admin:index' %}">{% trans "Home" %}</a></li>
+  <li><a href="/admin/agencia/">{% trans "Agencia" %}</a></li>
+  <li><a href="/admin/agencia/agenciado/">{% trans "Agenciado" %}</a></li>
+  <li>{%blocktrans %}Envío de mail a agenciados{%endblocktrans%}</li>
+        </ul>
+{% endblock %}
+
+{% block content %}
+
+            <!-- CONTENT TITLE -->
+<header id="grp-content-title">
+  <h1>{% trans "Envio de mail a agenciados" %}:</h1>
+</header>
+
+      <form action="" method="post">
+        {% csrf_token %}
+        {{ form|as_django_admin }}
+<footer class="grp-module grp-submit-row grp-fixed-footer">
+    <header style="display:none"><h1>Submit Options</h1></header>
+      <ul>
+          <li><input type="submit" name="submit" class="grp-button" value="{% trans "Enviar" %}" /></li>
+      </ul>
+</footer>
+
+      </form>
+
+{% endblock %}

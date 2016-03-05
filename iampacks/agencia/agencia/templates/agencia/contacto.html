@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{%block contacto_active%}active{%endblock%}
+
+{% block content %}
+
+  <div class='span'>
+    {% include 'agencia/conf/mapa.html' %}
+  </div>
+
+  <div class='span4'>
+    <a href=mailto:{{agencia.email}}>{{agencia.email}}</a>
+    <hr/>
+    {% for telefono in agencia.telefonos %}
+      {{telefono}}<br/>
+    {% endfor%}
+    <hr/>
+    {{agencia.direccion}}
+  </div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_static admin_modify %}
+{% load formadmin_filters %}
+
+{% block title %}
+{% trans "Adicionar agenciados selecionados a perfil de trabalho" as titulo_accion %}
+{{titulo_accion}} | {{ agencia.nombre }}
+{% endblock %}
+
+{% block breadcrumbs %}
+        {% trans "Adicionar agenciados selecionados a perfil de trabalho" as titulo_accion %}
+        <ul>
+            <li><a href="{% url 'admin:index' %}">{% trans "Home" %}</a></li>
+            <li><a href="/admin/agencia/">{% trans "Agencia" %}</a></li>
+            <li><a href="/admin/agencia/agenciado/">{% trans "Agenciados" %}</a></li>
+            <li>{{titulo_accion}}</li>
+        </ul>
+{% endblock %}
+
+
+{% block content %}
+
+<header id="grp-content-title">
+  <h1>{% trans "Selecione perfil em que deseja adicionar os agenciados selecionados:" %}</h1>
+</header>
+
+
+      <form action="/trabajo/agregar/agenciados/seleccionados/a/rol/" method="post">{% csrf_token %}
+        {{ form|as_django_admin }}
+<footer class="grp-module grp-submit-row grp-fixed-footer">
+    <header style="display:none"><h1>Submit Options</h1></header>
+      <ul>
+          <li><input type="submit" name="submit" class="grp-button" value="{% trans "Adicionar agenciados" %}" /></li>
+      </ul>
+</footer>
+      </form>
+
+<header id="grp-content-title">
+  <h1>{% trans "Agenciados selecionados" %}</h1>
+</header>
+<ul>
+  {% autoescape off %}
+  {% for agenciado in agenciados %}
+    <li>{{ agenciado.admin_link }}</li>
+  {% endfor %}
+  {% endautoescape %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{%block portfolio_active%}active{%endblock%}
+
+{% block content %} 
+
+  <div class="btn-toolbar" style='text-align:center'>
+    <div class="btn-group">
+      {% if portfolio.has_previous %}
+        <a class='btn' href="?page={{ portfolio.previous_page_number }}">Anterior</a>
+      {% endif %}
+      {% with ''|center:portfolio.paginator.num_pages as range %}
+        {% for _ in range %}
+          {% if forloop.counter == portfolio.number %}
+              <a class='btn' href='#'>
+                {%blocktrans with pagina=portfolio.number cantidad_paginas=portfolio.paginator.num_pages %}Página {{ pagina }} de {{ cantidad_paginas }}{%endblocktrans%}
+              </a>
+          {% else %}
+            <a class='btn' href='?page={{forloop.counter}}'>{{forloop.counter}}</a>
+          {% endif %}
+        {% endfor %}
+      {% endwith %}
+      {% if portfolio.has_next %}
+        <a class='btn' href="?page={{ portfolio.next_page_number }}">Próxima</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% include 'trabajo/itemportfolio/thumbnails.html' with portfolio=portfolio %}
+
+{% endblock %}

@@ -1,0 +1,12 @@
+<form action="/i18n/setlang/" method="post" id='language-form'>
+  {% csrf_token %}
+  <input type='hidden' id="language-input" name="language">
+</form>
+
+<script>
+function cambiar_idioma(codigo_idioma)
+{
+  $('#language-input').val(codigo_idioma);
+  $('#language-form').submit();
+}
+</script>

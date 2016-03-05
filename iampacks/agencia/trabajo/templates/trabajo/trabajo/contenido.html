@@ -1,0 +1,24 @@
+{% load i18n %}
+
+<h2>{% trans "Trabalho" %}: {{trabajo.titulo}}</h2>
+<p><span class="badge badge-info">{{trabajo.fecha_ingreso}}</span></p>
+<p><strong>{% trans "Descrição" %}:</strong> {{trabajo.descripcion}}</p>
+<hr/>
+<h3>{% trans "Perfis procurados" %}</h3>
+
+<ul>
+  {% for rol in trabajo.rol_set.all %}
+    <li><strong>{{rol.descripcion}}</strong>
+    <ul>
+      <li><strong>{% trans "Cache" %}:</strong> {% if rol.cache %} {{rol.cache|floatformat:2}} {%else%} {% trans "Sem informação" %} {%endif%}</li>
+      <li><strong>{% trans "Carateristicas" %}</strong> {{rol.caracteristicas}}</li>
+    </ul></li>
+    {% if user.agenciado and rol.id in user.agenciado.ids_roles_postulaciones %}
+      <span class="badge badge-success">{% trans "Voce já está postulado para este perfil" %}</span>
+    {% else %}
+      <a href="/agenciado/postular/?rol_id={{rol.id}}" class="btn btn-primary btn-large">{% trans "Aplicar ao perfil" %} &raquo;</a>
+    {% endif %}
+  {% empty %}
+    <li>{% trans "O trabalho nao registra perfis procurados" %}</li>
+  {% endfor %}
+</ul>

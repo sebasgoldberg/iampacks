@@ -1,0 +1,396 @@
+- fields: {imagen: '', mail: contato@brasilprodutora.com, nombre: BRASIL PRODUTORA,
+    user: null}
+  model: trabajo.productora
+  pk: 1
+- fields: {imagen: '', mail: test13@test.com, nombre: Test, user: null}
+  model: trabajo.productora
+  pk: 3
+- fields: {descripcion: dsvsd, estado: IN, fecha_ingreso: 2013-01-24, imagen: '',
+    productora: 3, titulo: Novo}
+  model: trabajo.trabajo
+  pk: 3
+- fields: {descripcion: Protagonico y bolos para pelicula, estado: IN, fecha_ingreso: 2013-01-22,
+    imagen: '', productora: 1, titulo: De Pernas Pro Ar 18}
+  model: trabajo.trabajo
+  pk: 1
+- fields: {descripcion: Extras y Principales para publicidad de Tang, estado: AT,
+    fecha_ingreso: 2013-01-22, imagen: trabajo/trabajo/Reguesh_y_los_4_Elementos.jpg,
+    productora: 1, titulo: Tang}
+  model: trabajo.trabajo
+  pk: 2
+- fields: {barrio: Vila Maria, ciudad: 19, codigo_postal: null, descripcion: '', direccion: Rua
+      Jose Durval de Barros, estado: 2, fecha: !!timestamp '2013-01-24 23:11:55+00:00',
+    tipo: C, trabajo: 1}
+  model: trabajo.eventotrabajo
+  pk: 1
+- fields: {barrio: Vila Maria, ciudad: 19, codigo_postal: null, descripcion: Primero,
+    direccion: Rua Jose Durval de Barros, estado: 2, fecha: !!timestamp '2013-01-25
+      12:17:04+00:00', tipo: C, trabajo: 2}
+  model: trabajo.eventotrabajo
+  pk: 2
+- fields: {barrio: Um barrio, ciudad: 33, codigo_postal: null, descripcion: Largo,
+    direccion: Sanches de Bustamante 148, estado: 4, fecha: !!timestamp '2013-01-25
+      12:17:04+00:00', tipo: P, trabajo: 2}
+  model: trabajo.eventotrabajo
+  pk: 3
+- fields: {cache: null, caracteristicas: vbvkbvckbvjkc, descripcion: Rol novo, trabajo: 3}
+  model: trabajo.rol
+  pk: 5
+- fields: {cache: null, caracteristicas: Todo tipo de personas que sean muy habiles
+      jugando al futbol., descripcion: Bolos, trabajo: 1}
+  model: trabajo.rol
+  pk: 3
+- fields: {cache: null, caracteristicas: "Ni\xF1os de 10 a 12 a\xF1os que sepan cantar.\r\
+      \n", descripcion: Extra, trabajo: 2}
+  model: trabajo.rol
+  pk: 2
+- fields: {cache: null, caracteristicas: "Mujeres con aspecto de madre entre 30 y\
+      \ 35 a\xF1os", descripcion: Madres, trabajo: 2}
+  model: trabajo.rol
+  pk: 4
+- fields: {cache: null, caracteristicas: "Hombre muy bien parecido entre 25 y 35 a\xF1\
+      os", descripcion: Protagonico, trabajo: 1}
+  model: trabajo.rol
+  pk: 1
+- fields: {agenciado: 1142, estado: PC, rol: 5}
+  model: trabajo.postulacion
+  pk: 19
+- fields: {agenciado: 823, estado: PC, rol: 5}
+  model: trabajo.postulacion
+  pk: 20
+- fields: {agenciado: 1404, estado: PC, rol: 5}
+  model: trabajo.postulacion
+  pk: 21
+- fields: {agenciado: 1223, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 22
+- fields: {agenciado: 606, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 23
+- fields: {agenciado: 1589, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 24
+- fields: {agenciado: 19, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 25
+- fields: {agenciado: 1215, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 26
+- fields: {agenciado: 1217, estado: PC, rol: 5}
+  model: trabajo.postulacion
+  pk: 18
+- fields: {agenciado: 8, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 27
+- fields: {agenciado: 141, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 28
+- fields: {agenciado: 1099, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 29
+- fields: {agenciado: 610, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 30
+- fields: {agenciado: 21, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 31
+- fields: {agenciado: 611, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 32
+- fields: {agenciado: 30, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 33
+- fields: {agenciado: 3, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 34
+- fields: {agenciado: 1210, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 35
+- fields: {agenciado: 1330, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 36
+- fields: {agenciado: 879, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 37
+- fields: {agenciado: 1069, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 38
+- fields: {agenciado: 1219, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 39
+- fields: {agenciado: 56, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 40
+- fields: {agenciado: 1581, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 41
+- fields: {agenciado: 1433, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 42
+- fields: {agenciado: 1387, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 43
+- fields: {agenciado: 1214, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 44
+- fields: {agenciado: 505, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 45
+- fields: {agenciado: 65, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 46
+- fields: {agenciado: 1717, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 47
+- fields: {agenciado: 1574, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 48
+- fields: {agenciado: 974, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 49
+- fields: {agenciado: 1221, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 50
+- fields: {agenciado: 810, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 51
+- fields: {agenciado: 63, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 52
+- fields: {agenciado: 1664, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 53
+- fields: {agenciado: 994, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 54
+- fields: {agenciado: 23, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 55
+- fields: {agenciado: 7, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 56
+- fields: {agenciado: 1531, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 57
+- fields: {agenciado: 1373, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 58
+- fields: {agenciado: 144, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 59
+- fields: {agenciado: 5, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 60
+- fields: {agenciado: 11, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 61
+- fields: {agenciado: 59, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 62
+- fields: {agenciado: 970, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 63
+- fields: {agenciado: 1100, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 64
+- fields: {agenciado: 54, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 65
+- fields: {agenciado: 934, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 66
+- fields: {agenciado: 1168, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 67
+- fields: {agenciado: 1202, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 68
+- fields: {agenciado: 20, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 69
+- fields: {agenciado: 1053, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 70
+- fields: {agenciado: 67, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 71
+- fields: {agenciado: 587, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 72
+- fields: {agenciado: 33, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 73
+- fields: {agenciado: 1220, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 74
+- fields: {agenciado: 1204, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 75
+- fields: {agenciado: 1211, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 76
+- fields: {agenciado: 1222, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 77
+- fields: {agenciado: 1283, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 78
+- fields: {agenciado: 42, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 79
+- fields: {agenciado: 1039, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 80
+- fields: {agenciado: 594, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 81
+- fields: {agenciado: 57, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 82
+- fields: {agenciado: 64, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 83
+- fields: {agenciado: 159, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 84
+- fields: {agenciado: 50, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 85
+- fields: {agenciado: 937, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 86
+- fields: {agenciado: 764, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 87
+- fields: {agenciado: 498, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 88
+- fields: {agenciado: 1198, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 89
+- fields: {agenciado: 1062, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 90
+- fields: {agenciado: 765, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 91
+- fields: {agenciado: 27, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 92
+- fields: {agenciado: 92, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 93
+- fields: {agenciado: 93, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 94
+- fields: {agenciado: 596, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 95
+- fields: {agenciado: 17, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 96
+- fields: {agenciado: 496, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 97
+- fields: {agenciado: 55, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 98
+- fields: {agenciado: 25, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 99
+- fields: {agenciado: 1139, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 100
+- fields: {agenciado: 29, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 101
+- fields: {agenciado: 890, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 102
+- fields: {agenciado: 61, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 103
+- fields: {agenciado: 1443, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 104
+- fields: {agenciado: 51, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 105
+- fields: {agenciado: 48, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 106
+- fields: {agenciado: 1304, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 107
+- fields: {agenciado: 1442, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 108
+- fields: {agenciado: 18, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 109
+- fields: {agenciado: 671, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 111
+- fields: {agenciado: 49, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 110
+- fields: {agenciado: 46, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 112
+- fields: {agenciado: 599, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 113
+- fields: {agenciado: 43, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 114
+- fields: {agenciado: 1396, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 115
+- fields: {agenciado: 75, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 116
+- fields: {agenciado: 66, estado: ST, rol: 5}
+  model: trabajo.postulacion
+  pk: 117
+- fields: {agenciado: 1404, estado: PC, rol: 3}
+  model: trabajo.postulacion
+  pk: 7
+- fields: {agenciado: 1589, estado: PC, rol: 3}
+  model: trabajo.postulacion
+  pk: 9
+- fields: {agenciado: 610, estado: SC, rol: 3}
+  model: trabajo.postulacion
+  pk: 10
+- fields: {agenciado: 1210, estado: SC, rol: 3}
+  model: trabajo.postulacion
+  pk: 11
+- fields: {agenciado: 597, estado: SC, rol: 3}
+  model: trabajo.postulacion
+  pk: 6
+- fields: {agenciado: 82, estado: PC, rol: 3}
+  model: trabajo.postulacion
+  pk: 16
+- fields: {agenciado: 823, estado: PC, rol: 2}
+  model: trabajo.postulacion
+  pk: 118
+- fields: {agenciado: 1404, estado: PC, rol: 2}
+  model: trabajo.postulacion
+  pk: 119
+- fields: {agenciado: 606, estado: PC, rol: 2}
+  model: trabajo.postulacion
+  pk: 5
+- fields: {agenciado: 3, estado: PC, rol: 2}
+  model: trabajo.postulacion
+  pk: 14
+- fields: {agenciado: 82, estado: PC, rol: 2}
+  model: trabajo.postulacion
+  pk: 17
+- fields: {agenciado: 610, estado: TP, rol: 4}
+  model: trabajo.postulacion
+  pk: 15
+- fields: {agenciado: 1492, estado: PC, rol: 1}
+  model: trabajo.postulacion
+  pk: 13
+- fields: {agenciado: 1216, estado: PC, rol: 1}
+  model: trabajo.postulacion
+  pk: 12

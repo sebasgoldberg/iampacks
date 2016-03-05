@@ -1,0 +1,14 @@
+{%load i18n%}
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans "Cuenta " %}{%if user.is_authenticated%}({{user.username}}) {%endif%}<b class="caret"></b></a>
+  <ul class="dropdown-menu pull-right">
+    {% if user.is_authenticated %}
+      <li><a href="{{link_cuenta_usuario}}"><i class='icon-user'></i> {% trans "Mi Cuenta" %}</a> </li>
+      <li><a href="/usuario/cambio/clave/"><i class='icon-retweet'></i> {% trans "Cambiar Clave" %}</a></li>
+      <li><a href="/usuario/logout/"><i class='icon-off'></i> {% trans "Salir" %}</a></li>
+    {%else%}
+      <li><a href="/usuario/registro/?next={%if link_cuenta_usuario%}{{link_cuenta_usuario}}{%else%}/accounts/profile/{%endif%}">{% trans "Registro" %}</a></li>
+      <li><a href="/usuario/login/">{% trans "Entrar" %}</a></li>
+    {% endif %}
+  </ul>
+</li>

@@ -1,0 +1,9 @@
+{% extends 'admin/change_list.html' %}
+{% load i18n %}
+
+{% block object-tools-items %}
+  <li><a href="/admin/notificacion/mailinvalido/" class="addlink">{% trans "E-mails Invalidos" %}</a></li>
+  <li><a href="/admin/agencia/agenciado/?con_foto=0&activo__exact=0&o=-2" class="addlink">{% trans "Últimos Inactivos Sin Foto" %}</a></li>
+  <li><a href="/admin/agencia/agenciado/?activo__exact=0&o=-2" class="addlink">{% trans "Últimos Inactivos" %}</a></li>
+  {{ block.super }}
+{% endblock %}

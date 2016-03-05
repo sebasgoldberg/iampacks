@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{%block home_active%}active{%endblock%}
+
+{% block content %}
+  {% block imagenes_agenciados_arriba %}
+    {% include 'agenciado/mini_thumbnails.html' with thumbnails_urls=thumbnails_urls.arriba %}
+  {% endblock %}
+
+  {% block hero %}
+    <div class="hero-unit">
+      {%comment%}
+      <div class='row'>
+      <div class='thumbnail span2'>
+        <img src='{{agencia.logo.url}}'/>
+      </div>
+      <div class='span9'>
+      {%endcomment%}
+        {% include 'agencia/conf/hero.html'%}
+        <p>
+          {% if user.is_anonymous %}
+            <a href="/usuario/registro/" class="btn btn-primary btn-large">{% trans "Cadastre-se" %} &raquo;</a>
+          {% elif not user.agenciado %}
+            <a href="/agenciado/" class="btn btn-primary btn-large">{% trans "Complete seu cadastro" %} &raquo;</a>
+          {% endif %}
+          <a href="/trabajo/busquedas/" class="btn btn-success btn-large">{% trans "Veja os perfis procurados" %} &raquo;</a>
+        </p>
+      {%comment%}</div>{%endcomment%}
+    </div>
+  {% endblock %}
+
+  {%block imagenes_agenciados_abajo %}
+    {% include 'agenciado/mini_thumbnails.html' with thumbnails_urls=thumbnails_urls.abajo %}
+  {%endblock%}
+
+
+  {% if trabajos %}
+    <hr/>
+    <h2>{% trans "Trabalhos Ativos Recentes" %}</h2>
+    {% include 'trabajo/trabajo/thumbnails.html' with trabajo=trabajo %}
+  {% endif %}
+
+  {% if portfolio %}
+    <hr/>
+    <h2>{% trans "Itens do Portifolio Recentes" %}</h2>
+    {% include 'trabajo/itemportfolio/thumbnails.html' with portfolio=portfolio %}
+  {% endif %}
+
+
+{% endblock %}

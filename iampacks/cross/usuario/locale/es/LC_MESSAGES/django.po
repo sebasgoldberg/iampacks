@@ -1,0 +1,163 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-04-01 07:08-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: forms.py:19 templates/registration/login.html:8
+msgid "Ingresar"
+msgstr ""
+
+#: forms.py:34
+msgid "Trocar"
+msgstr "Cambiar"
+
+#: forms.py:44
+msgid "Gerar"
+msgstr "Generar"
+
+#: forms.py:50
+msgid "O email ingresado ja existe"
+msgstr "El e-mail ingresado ya existe"
+
+#: forms.py:54
+msgid "Nome"
+msgstr "Nombre"
+
+#: forms.py:55
+msgid "Sobrenome"
+msgstr "Apellido"
+
+#: forms.py:67
+msgid "Registrar"
+msgstr "Registrar"
+
+#: views.py:26
+msgid "Sua senha foi trocada com sucesso"
+msgstr "Su clave fue modificada con éxito"
+
+#: views.py:44
+msgid "Sua senha ha mudado"
+msgstr "Su clave a cambiado"
+
+#: views.py:52
+msgid "Nova senha gerada com sucesso"
+msgstr "Nueva clave generada con éxito"
+
+#: views.py:53
+#, python-format
+msgid "Mail com nova senha enviado para %s"
+msgstr "Mail con nueva clave enviada para %s"
+
+#: views.py:94
+msgid "Sua conta esta criada"
+msgstr "Su cuenta se encuentra creada"
+
+#: views.py:102
+msgid "Registro realizado com sucesso!"
+msgstr "Registro realizado con éxito!"
+
+#: views.py:103
+msgid "Enviamos para seu email dados da sua nova conta."
+msgstr "Hemos enviado para su e-mail datos de su nueva cuenta."
+
+#: templates/registration/login.html:12
+msgid "Criar nova conta"
+msgstr "Crear nueva cuenta"
+
+#: templates/registration/login.html:13
+msgid "Esqueci minha senha"
+msgstr "No recuerdo mi clave"
+
+#: templates/usuario/cambio_clave.html:6
+msgid "Trocar Senha"
+msgstr "Modificar Clave"
+
+#: templates/usuario/dropdown_menu.html:3
+msgid "Cuenta "
+msgstr ""
+
+#: templates/usuario/dropdown_menu.html:6
+msgid "Mi Cuenta"
+msgstr ""
+
+#: templates/usuario/dropdown_menu.html:7
+msgid "Cambiar Clave"
+msgstr ""
+
+#: templates/usuario/dropdown_menu.html:8
+msgid "Salir"
+msgstr ""
+
+#: templates/usuario/dropdown_menu.html:10
+msgid "Registro"
+msgstr "Registro"
+
+#: templates/usuario/dropdown_menu.html:11
+msgid "Entrar"
+msgstr ""
+
+#: templates/usuario/registro.html:6
+msgid "Cadastro"
+msgstr "Registro"
+
+#: templates/usuario/reiniciar_clave.html:6
+msgid "Gerar Senha"
+msgstr "Generar Clave"
+
+#: templates/usuario/mail/cambio_clave.txt:3
+#, python-format
+msgid ""
+"Oi %(firstname)s!\n"
+"\n"
+"Voce tem uma nova senha.\n"
+"\n"
+"Sua nova senha e (%(clave)s). Lembre que seu usuário e (%(username)s).\n"
+"\n"
+"Voce pode trocar sua senha acessando a %(base_url)s/usuario/cambio/clave/ "
+msgstr ""
+"Hola %(firstname)s!\n"
+"\n"
+"Tienes una nueva clave.\n"
+"\n"
+"Su nueva clave es (%(clave)s). Recuerde que su usuario es (%(username)s).\n"
+"\n"
+"Usted puede cambiar su clave ingresando a %(base_url)s/usuario/cambio/"
+"clave/"
+
+#: templates/usuario/mail/creacion.txt:5
+#, python-format
+msgid ""
+"Oi %(first_name)s!\n"
+"\n"
+"Você tem uma nova conta em %(base_url)s/\n"
+"\n"
+"Você poderá ingressar a sua nova conta com seu usuário (%(username)s) e sua "
+"chave.\n"
+"\n"
+"Se você não lembra sua chave, poderá gerá-la de novo aqui: %(base_url)s/"
+"usuario/reiniciar/clave/"
+msgstr ""
+"Hola %(first_name)s!\n"
+"\n"
+"Usted tiene una nueva cuenta en %(base_url)s/\n"
+"\n"
+"Usted podrá ingresar a su nueva cuenta con su usuario (%(username)s) y su "
+"clave.\n"
+"\n"
+"Si usted no recuerda su clave, podra generarla de nuevo aqui: "
+"%(base_url)s/usuario/reiniciar/clave/"

@@ -1,0 +1,9 @@
+{% extends 'correo/base.txt' %}
+{% load i18n %}
+{% block mensaje %}{%blocktrans with firstname=usuario.first_name username=usuario.username base_url=ambiente.get_base_url %}Oi {{firstname}}!
+
+Voce tem uma nova senha.
+
+Sua nova senha e ({{clave}}). Lembre que seu usuário e ({{username}}).
+
+Voce pode trocar sua senha acessando a {{base_url}}/usuario/cambio/clave/ {%endblocktrans%} {% endblock %}

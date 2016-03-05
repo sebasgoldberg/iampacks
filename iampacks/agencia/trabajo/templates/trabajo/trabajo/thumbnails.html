@@ -1,0 +1,18 @@
+{% load i18n %}
+
+<ul class="thumbnails">
+  {% for trabajo in trabajos %}
+    <li class="span4">
+      <div class='thumbnail'>
+        <h3>{{trabajo.titulo}}</h3>
+        <p><span class="badge badge-info">{{trabajo.fecha_ingreso}}</span></p>
+        <p><strong>{% trans "Descrição" %}:</strong> {{trabajo.descripcion|truncatechars:75}}</p>
+        <a class="btn" href="/trabajo/busquedas/?id={{trabajo.id}}">{% trans "Ver detalhes" %} &raquo;</a>
+      </div>
+    </li>
+    {% if forloop.counter|divisibleby:3 %}
+      </ul>
+      <ul class="thumbnails">
+    {%endif%}
+  {% endfor %}
+</ul>
