@@ -186,7 +186,7 @@ class Agenciado(models.Model):
 
     # Datos administrativos del sistema 
     activo = models.BooleanField(default=True, verbose_name=ugettext_lazy(u'Ativo'))
-    fecha_ingreso = models.DateField(default=timezone.now(), verbose_name=ugettext_lazy(u'Data de agenciamento'))
+    fecha_ingreso = models.DateField(default=timezone.now, verbose_name=ugettext_lazy(u'Data de agenciamento'))
     recurso_id = models.IntegerField(null=True, editable=False) #Clave en aplicacion DELPHI
 
     # Agenciador 

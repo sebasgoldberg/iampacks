@@ -13,9 +13,11 @@ from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_lazy
 from iampacks.cross.direccion.models import Direccion
 from iampacks.cross.telefono.models import Telefono
+from django.utils.timezone import now
+
 
 class Evento(Direccion):
-  fecha = models.DateTimeField(default=datetime.today(),verbose_name=ugettext_lazy(u'Data do evento'), blank=True, null=True)
+  fecha = models.DateTimeField(default=now,verbose_name=ugettext_lazy(u'Data do evento'), blank=True, null=True)
   class Meta:
     abstract = True
     verbose_name = ugettext_lazy(u'Evento')
@@ -82,7 +84,7 @@ class ItemPortfolio(models.Model):
     # agregar rutas a configuracion del apache, al archivo settings y crear carpetas correspondientes
     imagen = models.ImageField(upload_to='trabajo/portfolio/', null=True, blank=True)
     thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1), ResizeToFill(358,202)], source='imagen', format='JPEG', options={'quality': 90})
-    fecha = models.DateField(default=date.today(),verbose_name=ugettext_lazy(u'Data'))
+    fecha = models.DateField(default=now,verbose_name=ugettext_lazy(u'Data'))
     def __unicode__(self):
       return self.titulo
     class Meta:
@@ -146,7 +148,7 @@ class Trabajo(models.Model):
     )
     estado = models.CharField(max_length=2,choices=ESTADO_TRABAJO,null=False)
 # @todo agregar validación entre secuencia de las distintas fechas
-    fecha_ingreso = models.DateField(default=date.today(),verbose_name=ugettext_lazy(u'Data ingreso'))
+    fecha_ingreso = models.DateField(default=now,verbose_name=ugettext_lazy(u'Data ingreso'))
     publicado = models.BooleanField(blank=True,verbose_name=ugettext_lazy(u'Publicado'),help_text=ugettext_lazy(u'Indica se o trabalho debe ser publicado no site da agencia'),default=True)
 
     @staticmethod

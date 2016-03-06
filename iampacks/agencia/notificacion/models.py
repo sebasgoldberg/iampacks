@@ -11,11 +11,13 @@ import datetime
 import time
 import re
 from django.core.exceptions import ValidationError
+from django.utils.timezone import now
+
 
 class BaseNotificacionMail(models.Model):
 
   email_destinatario = models.EmailField(verbose_name=ugettext_lazy(u'e-mail destinatario'), null=True, blank=False)
-  fecha_envio = models.DateTimeField(verbose_name=ugettext_lazy(u'Fecha de envío'), default=datetime.datetime.now())
+  fecha_envio = models.DateTimeField(verbose_name=ugettext_lazy(u'Fecha de envío'), default=now)
 
   class Meta:
     abstract = True
@@ -148,7 +150,7 @@ class NotificacionCuentaAgenciadoExistente(BaseNotificacionMail):
 class MailInvalido(models.Model):
 
   email = models.EmailField(verbose_name=ugettext_lazy(u'e-mail'), null=False, blank=False, unique=True)
-  fecha_deteccion = models.DateTimeField(verbose_name=ugettext_lazy(u'Fecha de detección'), default=datetime.datetime.now())
+  fecha_deteccion = models.DateTimeField(verbose_name=ugettext_lazy(u'Fecha de detección'), default=now)
 
   def get_agenciados(self):
     agenciados = set(Agenciado.objects.filter(mail=self.email))
