@@ -16,6 +16,7 @@ from iampacks.cross.telefono.models import Telefono as BaseTelefono
 from iampacks.agencia.perfil.models import *
 from django.contrib import messages
 from iampacks.cross.disponibilidad.models import Disponibilidad
+from django.utils import timezone
 
 # @pre Esta rutina se llama desde el metodo clean de una clase que lo redefine y hereda de formset
 def validarUnoIngresado(formset,campo,mensaje):
@@ -185,7 +186,7 @@ class Agenciado(models.Model):
 
     # Datos administrativos del sistema 
     activo = models.BooleanField(default=True, verbose_name=ugettext_lazy(u'Ativo'))
-    fecha_ingreso = models.DateField(default=date.today(), verbose_name=ugettext_lazy(u'Data de agenciamento'))
+    fecha_ingreso = models.DateField(default=timezone.now(), verbose_name=ugettext_lazy(u'Data de agenciamento'))
     recurso_id = models.IntegerField(null=True, editable=False) #Clave en aplicacion DELPHI
 
     # Agenciador 

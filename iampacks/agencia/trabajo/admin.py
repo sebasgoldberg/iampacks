@@ -31,6 +31,7 @@ class AgenciadoPostulacionInline(admin.TabularInline):
 class DireccionProductoraForm(BaseDireccionForm):
   class Meta:
     model=DireccionProductora
+    exclude=[]
 
 class DireccionProductoraInline(BaseDireccionInline):
   form=DireccionProductoraForm
@@ -59,6 +60,7 @@ class EventoInline(admin.StackedInline):
 class EventoTrabajoForm(BaseDireccionForm):
   class Meta:
     model=EventoTrabajo
+    exclude=[]
 
 class EventoTrabajoInline(EventoInline):
   form=EventoTrabajoForm
@@ -67,6 +69,7 @@ class EventoTrabajoInline(EventoInline):
 class EventodRolForm(BaseDireccionForm):
   class Meta:
     model=EventoRol
+    exclude=[]
 
 class EventoRolInline(EventoInline):
   form=EventodRolForm

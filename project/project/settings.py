@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'iampacks.cross.direccion',
     'iampacks.agencia.perfil',
     'iampacks.agencia.agencia',
+    'iampacks.agencia.agenciado',
+    'iampacks.agencia.trabajo',
+    'iampacks.agencia.notificacion',
 ]
 
 MIDDLEWARE_CLASSES = [
