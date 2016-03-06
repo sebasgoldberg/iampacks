@@ -68,6 +68,8 @@ setup(
     #packages=['iampacks',],
     packages=find_packages(),
 
+    include_package_data=True,
+
     # Alternatively, if you want to distribute just a my_module.py, uncomment
     # this:
     #   py_modules=["my_module"],
