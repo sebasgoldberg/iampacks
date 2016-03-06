@@ -59,7 +59,7 @@ class Command(BaseCommand):
       return match.group(1)
 
     if not self.silencioso:
-      print data
+      #print data
       raise DireccionEmailNoEncontrada()
 
   def handle(self,*args,**options):

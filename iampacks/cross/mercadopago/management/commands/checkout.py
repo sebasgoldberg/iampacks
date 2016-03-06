@@ -6,7 +6,7 @@ CLIENT_SECRET="Jxlm7QqG3y7fUtnfwsPcwTAzxCtzhBUI"
 
 mp = mercadopago.MP(CLIENT_ID, CLIENT_SECRET)
 
-print mp
+#print mp
 
 preference = {
   "items": [
@@ -21,4 +21,4 @@ preference = {
 
 preferenceResult = mp.create_preference(preference)
 
-print preferenceResult 
+#print preferenceResult 
