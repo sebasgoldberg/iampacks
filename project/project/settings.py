@@ -38,14 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-    'cities_light',
-    'iampacks.cross.telefono',
-    'iampacks.cross.direccion',
-    'iampacks.agencia.perfil',
-    'iampacks.agencia.agencia',
-    'iampacks.agencia.agenciado',
-    'iampacks.agencia.trabajo',
-    'iampacks.agencia.notificacion',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -128,3 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+
+from iampacks.agencia import agencia_set_settings
+
+agencia_set_settings(INSTALLED_APPS)
