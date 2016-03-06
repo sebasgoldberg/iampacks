@@ -8,3 +8,5 @@ tags
 *.swo
 *.pyc
 .coverage
+venv
+db.sqlite3

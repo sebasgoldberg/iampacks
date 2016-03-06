@@ -12,14 +12,17 @@ from iampacks.cross.correo.forms import MailForm
 class DireccionAgenciaForm(BaseDireccionForm):
   class Meta:
     model = DireccionAgencia
+    exclude = []
 
 class DireccionAgenciadoForm(BaseDireccionForm):
   class Meta:
     model = DireccionAgenciado
+    exclude = []
 
 class DireccionAgenciadoFormRelated(BaseDireccionFormRelated):
   class Meta:
     model = DireccionAgenciado
+    exclude = []
 
 class EnvioMailForm(MailForm):
   pass
