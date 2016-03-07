@@ -124,3 +124,4 @@ STATIC_URL = '/static/'
 from iampacks.agencia import agencia_set_settings
 
 agencia_set_settings(INSTALLED_APPS)
+SITE_ID=1

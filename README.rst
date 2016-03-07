@@ -21,4 +21,4 @@ Add into the bottom of the file:
 
     agencia_set_settings(INSTALLED_APPS)
 
-
+    SITE_ID=1
