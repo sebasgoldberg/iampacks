@@ -27,12 +27,6 @@ class AgenciaTestCase(TestCase):
       'documento_cpf' : cpf,
       'responsable' : u'Responsable de Test',
       #cuenta_bancaria: 
-      ## Datos de direccion
-      'estado' : Region.objects.get_or_create(country=Country.objects.get_or_create()[0])[0].id,
-      'ciudad' : Ciudad.objects.get_or_create(country=Country.objects.get_or_create()[0],region=Region.objects.get_or_create()[0])[0].id,
-      'barrio' : u'Barrio de Test',
-      'direccion' : u'Direccion de Test',
-      'codigo_postal' : u'1234',
       ## Caracteristicas fisicas
       'sexo' : u'M',
       'ojos' : Ojos.objects.get_or_create(descripcion='Ojos')[0].id ,
@@ -70,6 +64,24 @@ class AgenciaTestCase(TestCase):
       'videoagenciado_set-TOTAL_FORMS': u'0',
       'videoagenciado_set-INITIAL_FORMS': u'0',
 
+      'disponibilidadtrabajoagenciado_set-TOTAL_FORMS': u'0',
+      'disponibilidadtrabajoagenciado_set-INITIAL_FORMS': u'0',
+
+      'trabajovigenteagenciado_set-TOTAL_FORMS': u'0',
+      'trabajovigenteagenciado_set-INITIAL_FORMS': u'0',
+
+      'trabajorealizadoagenciado_set-TOTAL_FORMS': u'0',
+      'trabajorealizadoagenciado_set-INITIAL_FORMS': u'0',
+
+      ## Datos de direccion
+      'direccionagenciado_set-TOTAL_FORMS': u'1',
+      'direccionagenciado_set-INITIAL_FORMS': u'0',
+      'direccionagenciado_set-0-pais' : Country.objects.get_or_create()[0].id,
+      'direccionagenciado_set-0-estado' : Region.objects.get_or_create(country=Country.objects.get_or_create()[0])[0].id,
+      'direccionagenciado_set-0-ciudad' : Ciudad.objects.get_or_create(country=Country.objects.get_or_create()[0],region=Region.objects.get_or_create()[0])[0].id,
+      'direccionagenciado_set-0-barrio' : u'Barrio de Test',
+      'direccionagenciado_set-0-direccion' : u'Direccion de Test',
+      'direccionagenciado_set-0-codigo_postal' : u'1234',
       }
 
   @staticmethod
@@ -180,15 +192,9 @@ class AgenciaTestCase(TestCase):
 
     dict_form_agenciado=AgenciaTestCase.get_dict_form_agenciado()
 
-    # Se intenta salvar los datos y se verifica que hay un error referente a las fotos del agenciado
-    response = c.post('/agenciado/', dict_form_agenciado)
-    self.assertEqual(response.status_code,200)
-    self.assertTrue('agenciado/agenciado.html' in [t.name for t in response.templates])
-    self.assertRaises(Agenciado.DoesNotExist,Agenciado.objects.get,user__username = 'test')
-    self.assertFalse(len(response.context['fotoAgenciadoFormSet'].non_form_errors())==0)
-
     # Se agrega la foto y se intenta actualizar el perfil.
-    response = AgenciaTestCase.adjuntar_imagen_y_postear(c,'/agenciado/',dict_form_agenciado)
+    #response = AgenciaTestCase.adjuntar_imagen_y_postear(c,'/agenciado/',dict_form_agenciado)
+    response = c.post('/agenciado/', dict_form_agenciado, follow = True)
     self.assertEqual(response.status_code,200)
     self.assertTrue('agenciado/agenciado.html' in [t.name for t in response.templates])
     # Se verifica que no existen errores
@@ -199,9 +205,14 @@ class AgenciaTestCase(TestCase):
     self.assertTrue(len(response.context['telefonoFormSet'].non_form_errors())==0)
     self.assertTrue(len(response.context['fotoAgenciadoFormSet'].non_form_errors())==0)
     self.assertTrue(len(response.context['videoAgenciadoFormSet'].non_form_errors())==0)
+    self.assertTrue(len(response.context['disponibilidadTrabajoAgenciadoFormSet'].non_form_errors())==0)
+    self.assertTrue(len(response.context['trabajoVigenteAgenciadoFormSet'].non_form_errors())==0)
+    self.assertTrue(len(response.context['trabajoRealizadoAgenciadoFormSet'].non_form_errors())==0)
+    self.assertTrue(len(response.context['direccionFormSet'].non_form_errors())==0)
+
     # Se verifica que el usuario tiene asociado un perfil de agenciado inactivo.
+    print(response.content.decode('utf8'))
     agenciado=Agenciado.objects.get(user__username = 'test')
-    self.assertIsInstance(agenciado,Agenciado)
     self.assertFalse(agenciado.activo)
 
     """

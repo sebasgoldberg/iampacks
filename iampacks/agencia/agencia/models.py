@@ -17,6 +17,7 @@ from iampacks.agencia.perfil.models import *
 from django.contrib import messages
 from iampacks.cross.disponibilidad.models import Disponibilidad
 from django.utils import timezone
+from iampacks.agencia.agencia import settings as agencia_settings
 
 # @pre Esta rutina se llama desde el metodo clean de una clase que lo redefine y hereda de formset
 def validarUnoIngresado(formset,campo,mensaje):
@@ -51,7 +52,7 @@ class Agencia(models.Model):
   titulo_home = models.CharField(max_length=100, verbose_name=ugettext_lazy(u'Titulo pagina inicial'), null=True, blank=True)
   presentacion_home = models.TextField(null=True, blank=True, verbose_name=ugettext_lazy(u'Presentação pagina inicial'))
   mapa_contacto = models.TextField(null=True, blank=True, verbose_name=ugettext_lazy(u'Mapa pagina contato'), help_text=ugettext_lazy(u'Aqui tem que colar o HTML gerado no google maps a partir de seu endereço'))
-  foto_agenciado_obligatoria = models.BooleanField(default=True, verbose_name=ugettext_lazy(u'Foto Agenciado Obligatoria'))
+  foto_agenciado_obligatoria = models.BooleanField(default=agencia_settings.PHOTO_MANDATORY, verbose_name=ugettext_lazy(u'Foto Agenciado Obligatoria'))
   class Meta:
     ordering = ['nombre']
     verbose_name = ugettext_lazy(u"Agencia")
