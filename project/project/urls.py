@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from iampacks.cross.usuario.forms import UsuarioAuthenticationForm
+from django.views.generic import RedirectView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -32,4 +33,5 @@ urlpatterns = [
     url(r'^direccion/', include('iampacks.cross.direccion.urls')),
     url(r'^usuario/', include('iampacks.cross.usuario.urls')),
     url(r'^captcha/', include('captcha.urls')),
+    url(r'^$', RedirectView.as_view(url='/agencia/')),
 ]

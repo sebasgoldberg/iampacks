@@ -1,6 +1,7 @@
 # coding=utf-8
 from django.core.mail import EmailMultiAlternatives
 from django.conf import settings
+from iampacks.cross.correo import settings as correo_settings
 
 class Mail(EmailMultiAlternatives):
 
@@ -12,8 +13,10 @@ class Mail(EmailMultiAlternatives):
 
   def __init__(self,asunto, cuerpo_de_texto, destinatarios,ccs=None,bccs=None):
 
-    if not settings.AMBIENTE.email.user:
-      raise Exception(u'No se ha definido settings.AMBIENTE.email.user')
+    if correo_settings.EMAIL_USER is None:
+      # @todo Ver de loguear el un warning.
+      pass
+      #raise Exception(u'No se ha definido configuración para EMAIL_USER (remitente de emails)')
     
     _asunto = self.actualizar_asunto(asunto)
     reply_to=self.get_reply_to()
@@ -25,7 +28,7 @@ class Mail(EmailMultiAlternatives):
     self.mensaje = EmailMultiAlternatives(
       _asunto,
       cuerpo_de_texto,
-      settings.AMBIENTE.email.user,
+      correo_settings.EMAIL_USER,
       destinatarios,
       headers = _headers,
       cc=ccs,
@@ -36,7 +39,12 @@ class Mail(EmailMultiAlternatives):
     self.mensaje.attach_alternative(html_content, "text/html")
 
   def send(self):
-    self.mensaje.send()
+    from socket import error as socket_error
+    try:
+      self.mensaje.send()
+    except socket_error:
+      # @todo Ver de loguear el error.
+      pass
 
   @staticmethod
   def get_email_admins():

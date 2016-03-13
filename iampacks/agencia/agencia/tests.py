@@ -9,6 +9,7 @@ from django.core.exceptions import ValidationError
 from django.test.client import Client
 from django.contrib.auth.models import User
 from django.core import mail
+from iampacks.cross.direccion.models import *
 
 class AgenciaTestCase(TestCase):
 
@@ -28,7 +29,7 @@ class AgenciaTestCase(TestCase):
       'responsable' : u'Responsable de Test',
       #cuenta_bancaria: 
       ## Datos de direccion
-      'estado' : Estado.objects.get().id,
+      'estado' : Region.objects.get().id,
       'ciudad' : Ciudad.objects.get().id,
       'barrio' : u'Barrio de Test',
       'direccion' : u'Direccion de Test',
@@ -109,15 +110,35 @@ class AgenciaTestCase(TestCase):
     """
     Registro de usuario
     """
+    from captcha.models import CaptchaStore
+    captcha_count = CaptchaStore.objects.count()
+    self.failUnlessEqual(captcha_count, 0)
+
     # Se accede a la página de registro.
     response = c.get('/usuario/registro/')
     self.assertEqual(response.status_code,200)
     self.assertTrue('usuario/registro.html' in [t.name for t in response.templates])
 
+    captcha_count = CaptchaStore.objects.count()
+    self.failUnlessEqual(captcha_count, 1)
+    captcha = CaptchaStore.objects.all()[0]
+
     # Se registra un nuevo usuario y se verifica se muestre el formulario de agenciado.
-    response = c.post('/usuario/registro/', {'username': 'test', 'password1': 'test', 'password2': 'test', 'first_name': 'Test', 'last_name': 'Last', 'email': 'test@gmail.com'}, follow = True)
+    post_data = {
+        'username': 'test',
+        'password1': 'test1234',
+        'password2': 'test1234',
+        'first_name': 'Test',
+        'last_name': 'Last',
+        'email': 'test@gmail.com',
+        'captcha_0': captcha.hashkey,
+        'captcha_1': captcha.response,
+        'next_page': '/agenciado/'
+        }
+    response = c.post('/usuario/registro/', post_data, follow = True)
     self.assertEqual(response.status_code,200)
-    self.assertTrue('agenciado/agenciado.html' in [t.name for t in response.templates])
+    templates_names = [t.name for t in response.templates]
+    self.assertTrue('agenciado/agenciado.html' in templates_names)
     user=User.objects.get(username='test')
     self.assertIsInstance(user,User)
 
@@ -136,12 +157,15 @@ class AgenciaTestCase(TestCase):
     response = c.get('/agenciado/',follow=True)
     self.assertEqual(response.status_code,200)
     self.assertTrue('registration/login.html' in [t.name for t in response.templates])
-    self.assertTrue('http://testserver/accounts/login/?next=/agenciado/' in 
+    self.assertTrue('/accounts/login/?next=/agenciado/' in 
       [redirect[0] for redirect in response.redirect_chain])
 
     # Se intenta realizar el login de un usuario ahora existente y se verifica la redirección a la sección de agenciados
-    response = c.post('/accounts/login/',{'username': 'test', 'password': 'test'}, follow = True)
+    response = c.post('/accounts/login/?next=/agenciado/',{'username': 'test', 'password': 'test1234'}, follow = True)
     self.assertEqual(response.status_code,200)
+    #print(templates_names)
+    #print(post_data)
+    #print(response.content.decode('utf8'))
     self.assertTrue('agenciado/agenciado.html' in [t.name for t in response.templates])
 
   #def test_carga_datos_perfil(self):
@@ -151,7 +175,7 @@ class AgenciaTestCase(TestCase):
     """
     # Se realiza el login
     c = Client()
-    self.assertTrue(c.login(username = 'test', password = 'test'))
+    self.assertTrue(c.login(username = 'test', password = 'test1234'))
 
     # Se accede a la sección del perfil de agenciado
     response = c.get('/agenciado/')
