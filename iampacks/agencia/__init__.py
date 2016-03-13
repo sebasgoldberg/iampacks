@@ -1,14 +1,27 @@
 #encoding=utf8
 
 AGENCIA_APPS = [
+    'imagekit',
+    'captcha',
+    #'modeltranslation',
+    'crispy_forms',
     'cities_light',
-    'iampacks.cross.telefono',
+    'captcha',
+    'iampacks.cross.estatico',
     'iampacks.cross.direccion',
+    'iampacks.cross.telefono',
+    'iampacks.cross.correo',
+    'iampacks.cross.usuario',
+    'iampacks.cross.idioma',
+    'iampacks.cross.disponibilidad',
     'iampacks.agencia.perfil',
     'iampacks.agencia.agencia',
     'iampacks.agencia.agenciado',
     'iampacks.agencia.trabajo',
     'iampacks.agencia.notificacion',
+    'iampacks.cross.install',
+    'iampacks.cross.backup',
+    'iampacks.cross.utils',
 ]
 
 def agencia_set_settings(INSTALLED_APPS):

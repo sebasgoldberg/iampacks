@@ -130,13 +130,13 @@ class AgenciadoOtrosDatosForm(ModelForm):
       )
 
 BaseDireccionFormSet = inlineformset_factory(Agenciado, DireccionAgenciado, extra=1, max_num=1, can_delete=False, form = DireccionAgenciadoFormRelated)
-BaseTelefonoFormSet = inlineformset_factory(Agenciado, Telefono, extra=1, max_num=6)
-BaseFotoAgenciadoFormSet = inlineformset_factory(Agenciado, FotoAgenciado, extra=1, max_num=6)
+BaseTelefonoFormSet = inlineformset_factory(Agenciado, Telefono, extra=1, max_num=6, exclude=[])
+BaseFotoAgenciadoFormSet = inlineformset_factory(Agenciado, FotoAgenciado, extra=1, max_num=6, exclude=[])
 VideoAgenciadoFormSet = inlineformset_factory(Agenciado, VideoAgenciado, extra=1, max_num=6, exclude=['codigo_video'])
 
-DisponibilidadTrabajoAgenciadoFormSet = inlineformset_factory(Agenciado, DisponibilidadTrabajoAgenciado, extra=1, max_num=10)
-TrabajoVigenteAgenciadoFormSet = inlineformset_factory(Agenciado, TrabajoVigenteAgenciado, extra=1, max_num=10)
-TrabajoRealizadoAgenciadoFormSet = inlineformset_factory(Agenciado, TrabajoRealizadoAgenciado, extra=1, max_num=10)
+DisponibilidadTrabajoAgenciadoFormSet = inlineformset_factory(Agenciado, DisponibilidadTrabajoAgenciado, extra=1, max_num=10, exclude=[])
+TrabajoVigenteAgenciadoFormSet = inlineformset_factory(Agenciado, TrabajoVigenteAgenciado, extra=1, max_num=10, exclude=[])
+TrabajoRealizadoAgenciadoFormSet = inlineformset_factory(Agenciado, TrabajoRealizadoAgenciado, extra=1, max_num=10, exclude=[])
 
 class DireccionFormSet(BaseDireccionFormSet):
   def clean(self):

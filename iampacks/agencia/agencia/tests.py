@@ -90,14 +90,14 @@ class AgenciaTestCase(TestCase):
     """
     # Se accede al home
     c = Client()
-    response = c.get('/',follow=True)
+    response = c.get('/agencia/',follow=True)
     self.assertEqual(response.status_code,200)
 
     # Se accede a la seccion de agenciados y se verifica una redirección a la página de login
     response = c.get('/agenciado/',follow=True)
     self.assertEqual(response.status_code,200)
     self.assertTrue('registration/login.html' in [t.name for t in response.templates])
-    self.assertTrue('http://testserver/accounts/login/?next=/agenciado/' in 
+    self.assertTrue('/accounts/login/?next=/agenciado/' in 
       [redirect[0] for redirect in response.redirect_chain])
 
     # Se intenta realizar el login de un usuario inexistente y se verifica un login fallido

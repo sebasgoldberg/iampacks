@@ -22,3 +22,13 @@ Add into the bottom of the file:
     agencia_set_settings(INSTALLED_APPS)
 
     SITE_ID=1
+
+urls.py
+-------
+
+Add the following entries to urlpatterns:
+
+    url(r'^agencia/', include('iampacks.agencia.agencia.urls')),
+    url(r'^agenciado/', include('iampacks.agencia.agenciado.urls')),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login', {'authentication_form':UsuarioAuthenticationForm}),
+    url(r'^captcha/', include('captcha.urls')),

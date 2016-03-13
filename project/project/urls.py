@@ -13,9 +13,23 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from iampacks.cross.usuario.forms import UsuarioAuthenticationForm
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^agencia/', include('iampacks.agencia.agencia.urls')),
+    url(r'^agenciado/', include('iampacks.agencia.agenciado.urls')),
+    url(r'^accounts/login/$', 'django.contrib.auth.views.login', {'authentication_form':UsuarioAuthenticationForm}),
+    url(r'^captcha/', include('captcha.urls')),
+    url(r'^admin/password_reset/$', RedirectView.as_view(url='/usuario/reiniciar/clave/'), name='admin_password_reset'),
+    #url(r'^uploads/(?P<path>.*)$', 'django.views.static.serve',
+      #{'document_root': settings.MEDIA_ROOT}),
+    url(r'^trabajo/', include('iampacks.agencia.trabajo.urls')),
+    url(r'^accounts/profile/$', 'iampacks.agencia.agenciado.views.index'),
+    #url(r'^i18n/', include('django.conf.urls.i18n')),
+    url(r'^direccion/', include('iampacks.cross.direccion.urls')),
+    url(r'^usuario/', include('iampacks.cross.usuario.urls')),
+    url(r'^captcha/', include('captcha.urls')),
 ]

@@ -14,6 +14,7 @@ from django.template import loader, Context
 from django.template import RequestContext
 from iampacks.agencia.agencia.mail import MailAgencia
 from django.contrib import messages
+from iampacks.agencia.agencia import settings as agencia_settings
 
 def notify_register(sender,request,**kwargs):
   messages.info(request,_(u'Por favor atualize os dados do seu perfil a ser analizado por nossa agencia.'))
@@ -21,8 +22,8 @@ def notify_register(sender,request,**kwargs):
 usuario_after_register_before_redirect.connect(notify_register)
 
 def index(request):
-  if settings.AMBIENTE.sitio.externo.url:
-    return redirect(settings.AMBIENTE.sitio.externo.url)
+  if agencia_settings.SITIO_EXTERNO_URL:
+    return redirect(agencia_settings.SITIO_EXTERNO_URL)
   trabajos = Trabajo.objects.filter(publicado=True).order_by('-fecha_ingreso')[:3]
   portfolio = ItemPortfolio.objects.order_by('-fecha')[:3]
   return render(request,'agencia/index.html', { 'trabajos': trabajos, 'portfolio': portfolio})
