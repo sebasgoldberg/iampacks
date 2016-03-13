@@ -1,6 +1,7 @@
 # coding=utf-8
 from iampacks.agencia.agencia.models import Agenciado, FotoAgenciado, VideoAgenciado, Telefono
 from iampacks.agencia.perfil.models import Danza, Deporte, EstadoDientes, Idioma, Instrumento, Ojos, Pelo, Piel, Talle
+from iampacks.cross.telefono.models import Compania
 from django.test import TestCase
 from datetime import date
 from datetime import timedelta
@@ -12,8 +13,6 @@ from django.core import mail
 from iampacks.cross.direccion.models import *
 
 class AgenciaTestCase(TestCase):
-
-  fixtures = ['agencia/fixtures/test-data.yaml']
 
   @staticmethod
   def get_dict_form_agenciado(mail=u'test@gmail.com',rg=u'123100',cpf=u'123100'):
@@ -29,23 +28,23 @@ class AgenciaTestCase(TestCase):
       'responsable' : u'Responsable de Test',
       #cuenta_bancaria: 
       ## Datos de direccion
-      'estado' : Region.objects.get().id,
-      'ciudad' : Ciudad.objects.get().id,
+      'estado' : Region.objects.get_or_create(country=Country.objects.get_or_create()[0])[0].id,
+      'ciudad' : Ciudad.objects.get_or_create(country=Country.objects.get_or_create()[0],region=Region.objects.get_or_create()[0])[0].id,
       'barrio' : u'Barrio de Test',
       'direccion' : u'Direccion de Test',
       'codigo_postal' : u'1234',
       ## Caracteristicas fisicas
       'sexo' : u'M',
-      'ojos' : Ojos.objects.get().id ,
-      'pelo' : Pelo.objects.get().id ,
-      'piel' : Piel.objects.get().id ,
+      'ojos' : Ojos.objects.get_or_create(descripcion='Ojos')[0].id ,
+      'pelo' : Pelo.objects.get_or_create(descripcion='Pelo')[0].id ,
+      'piel' : Piel.objects.get_or_create(descripcion='Piel')[0].id ,
       'altura' : 181,
       'peso' : 82,
-      'talle' : Talle.objects.get().id ,
+      'talle' : Talle.objects.get_or_create(descripcion='Talle')[0].id ,
       'talle_camisa' : u'38',
       'talle_pantalon' : u'36',
       'calzado' : u'44',
-      'estado_dientes' : EstadoDientes.objects.get().id ,
+      'estado_dientes' : EstadoDientes.objects.get_or_create(descripcion='Estado Dientes')[0].id ,
       ## Habilidades
       #deportes:
       #danzas: 
@@ -62,17 +61,14 @@ class AgenciaTestCase(TestCase):
 
       'telefono_set-TOTAL_FORMS': u'1',
       'telefono_set-INITIAL_FORMS': u'0',
-      'telefono_set-MAX_NUM_FORMS': u'',
-      'telefono_set-0-compania': Compania.objects.get().id,
+      'telefono_set-0-compania': Compania.objects.get_or_create(descripcion='Compañia')[0].id,
       'telefono_set-0-telefono': '123456789',
 
-      'fotoagenciado_set-TOTAL_FORMS': u'1',
+      'fotoagenciado_set-TOTAL_FORMS': u'0',
       'fotoagenciado_set-INITIAL_FORMS': u'0',
-      'fotoagenciado_set-MAX_NUM_FORMS': u'',
 
-      'videoagenciado_set-TOTAL_FORMS': u'1',
+      'videoagenciado_set-TOTAL_FORMS': u'0',
       'videoagenciado_set-INITIAL_FORMS': u'0',
-      'videoagenciado_set-MAX_NUM_FORMS': u'',
 
       }
 
