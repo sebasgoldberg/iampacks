@@ -3,7 +3,7 @@ from django.forms import ModelForm, ModelChoiceField
 from django.forms.utils import ErrorList
 from cities_light.models import Country, Region
 from iampacks.cross.direccion.models import Ciudad
-from iampacks.cross.direccion.models import COUNTRY_FILTER
+from iampacks.cross.direccion import settings as direccion_settings
 from django.utils.translation import ugettext as _
 
 class BaseDireccionForm(ModelForm):
@@ -32,7 +32,10 @@ class BaseDireccionFormRelated(ModelForm):
 
     super(BaseDireccionFormRelated,self).__init__(data, files, auto_id, prefix, initial, error_class, label_suffix, empty_permitted, instance)
 
-    queryset_pais = Country.objects.filter(code2__in=COUNTRY_FILTER)
+    if direccion_settings.COUNTRY_FILTER is not None:
+        queryset_pais = Country.objects.filter(code2__in=direccion_settings.COUNTRY_FILTER)
+    else:
+        queryset_pais = Country.objects.filter()
     queryset_region = self.get_queryset(data,instance,prefix,'pais','country',Region)
     queryset_ciudad = self.get_queryset(data,instance,prefix,'estado','region',Ciudad)
 

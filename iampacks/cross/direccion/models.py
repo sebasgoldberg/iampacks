@@ -4,8 +4,7 @@ import cities_light
 from cities_light.models import City, Region, Country
 from django.utils.translation import ugettext_lazy
 from django.db import router
-
-COUNTRY_FILTER = ('AR', 'BR')
+from iampacks.cross.direccion import settings as direccion_settings
 
 def filter_city_import(sender, items, **kwargs):
   if items[8] not in ('AR', 'BR'):
@@ -30,7 +29,7 @@ class Ciudad(City):
 
 class Direccion(models.Model):
   descripcion = models.CharField(max_length=60, verbose_name=ugettext_lazy(u'Descripção'),blank=True,null=True)
-  pais = models.ForeignKey(Country,on_delete=models.PROTECT, verbose_name=ugettext_lazy(u'Pais'),null=True, blank=False, limit_choices_to = {'code2__in': COUNTRY_FILTER})
+  pais = models.ForeignKey(Country,on_delete=models.PROTECT, verbose_name=ugettext_lazy(u'Pais'),null=True, blank=False)
   estado = models.ForeignKey(Region, on_delete=models.PROTECT, verbose_name=ugettext_lazy(u'Estado'),null=True, blank=False)
   ciudad = models.ForeignKey(Ciudad, on_delete=models.PROTECT, verbose_name=ugettext_lazy(u'Cidade'),null=True, blank=False)
   barrio = models.CharField(max_length=60, verbose_name=ugettext_lazy(u'Barrio'), blank=True, null=True)
