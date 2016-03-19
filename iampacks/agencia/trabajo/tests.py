@@ -17,8 +17,8 @@ from django.core import mail
 class TrabajoTestCase(TestCase):
 
   fixtures = [
-    'trabajo/fixtures/agenciador_user.yaml',
-    'agencia/fixtures/test-data.yaml'
+    'iampacks/agencia/trabajo/fixtures/agenciador_user.yaml',
+    'iampacks/agencia/agencia/fixtures/test-data.yaml'
   ]
 
   @staticmethod

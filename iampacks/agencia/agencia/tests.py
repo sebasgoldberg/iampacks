@@ -226,7 +226,6 @@ class AgenciaTestCase(TestCase):
     response = c.post('/usuario/reiniciar/clave/',{'email': agenciado.mail}, follow = True)
     self.assertEqual(response.status_code,200)
     self.assertTrue('usuario/reiniciar_clave.html' in [t.name for t in response.templates])
-    self.assertTrue(response.context['messages'])
     self.assertTrue(len(mail.outbox)>0)
 
   #def test_validacion_mail_registro(self):

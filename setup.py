@@ -84,7 +84,8 @@ setup(
         'django-cities-light',
         'django-crispy-forms',
         'pytz',
-        'django-simple-captcha',],
+        'django-simple-captcha',
+        'pyyaml'],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
