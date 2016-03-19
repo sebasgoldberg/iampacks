@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class NotificacionCuentaAgenciadoExistenteTestCase(TestCase):
 
-  fixtures = [u'fixture/test/agencia.json']
+  fixtures = [u'iampacks/agencia/agencia/fixture/test/agencia.json']
 
   def test_notificacion_enviada(self):
 
@@ -21,7 +21,7 @@ class NotificacionCuentaAgenciadoExistenteTestCase(TestCase):
     Agenciado.objects.get(user=agenciado.user)
     self.assertFalse(agenciado.user.is_staff)
     self.assertFalse(agenciado.user.is_superuser)
-    self.assertTrue(agenciado.user.last_login,None)
+    self.assertEquals(agenciado.user.last_login,None)
     self.assertEquals(cantidad_agenciados_sin_usuario-1,Agenciado.objects.filter(mail__isnull=False,user__isnull=True).count())
 
 
