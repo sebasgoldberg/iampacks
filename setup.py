@@ -85,7 +85,9 @@ setup(
         'django-crispy-forms',
         'pytz',
         'django-simple-captcha',
-        'pyyaml'],
+        'pyyaml',
+        'django-modeltranslation',
+        ],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,

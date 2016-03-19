@@ -273,6 +273,8 @@ class Agenciado(models.Model):
     descripcion.short_description = ugettext_lazy(u'Descripção')
 
     def edad(self):
+      if self.fecha_nacimiento is None:
+        return u'-'
       dias_desde_nacimiento=(date.today()-self.fecha_nacimiento).days
       if dias_desde_nacimiento<365:
         return _(u'%s meses')%int(dias_desde_nacimiento/30.4375)

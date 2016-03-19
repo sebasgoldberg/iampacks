@@ -18,7 +18,6 @@ class TrabajoTestCase(TestCase):
 
   fixtures = [
     'iampacks/agencia/trabajo/fixtures/agenciador_user.yaml',
-    'iampacks/agencia/agencia/fixtures/test-data.yaml'
   ]
 
   @staticmethod
@@ -55,7 +54,8 @@ class TrabajoTestCase(TestCase):
     """
     dict_form_agenciado = AgenciaTestCase.get_dict_form_agenciado(mail=u'testtrabajo01@gmail.com',rg=u'123100-2-01',cpf=u'123100-2-01')
     dict_form_agenciado.update(TrabajoTestCase.get_management_form_data('postulacion_set'))
-    response = AgenciaTestCase.adjuntar_imagen_y_postear(c,'/admin/agencia/agenciado/add/',dict_form_agenciado)
+    #response = AgenciaTestCase.adjuntar_imagen_y_postear(c,'/admin/agencia/agenciado/add/',dict_form_agenciado)
+    response = c.post('/agenciado/', dict_form_agenciado, follow = True)
     self.assertEqual(response.status_code,200)
     agenciado=Agenciado.objects.get(mail=u'testtrabajo01@gmail.com')
     self.assertIsInstance(agenciado,Agenciado)

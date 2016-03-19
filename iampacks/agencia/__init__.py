@@ -7,6 +7,7 @@ AGENCIA_APPS = [
     'crispy_forms',
     'cities_light',
     'captcha',
+    'modeltranslation',
     'iampacks.cross.estatico',
     'iampacks.cross.direccion',
     'iampacks.cross.telefono',
@@ -29,3 +30,9 @@ def agencia_set_settings(INSTALLED_APPS):
     for app in AGENCIA_APPS:
         if not app in INSTALLED_APPS:
             INSTALLED_APPS.append(app)
+
+gettext = lambda s: s
+
+def agencia_set_lang(LANGUAGES):
+    LANGUAGES.append(('pt-br', gettext('Portugues')))
+    LANGUAGES.append(('es', gettext('Spanish')))

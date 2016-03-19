@@ -121,7 +121,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-from iampacks.agencia import agencia_set_settings
+from iampacks.agencia import agencia_set_settings, agencia_set_lang
 
+LANGUAGES = []
+agencia_set_lang(LANGUAGES)
 agencia_set_settings(INSTALLED_APPS)
 SITE_ID=1

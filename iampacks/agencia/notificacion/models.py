@@ -63,7 +63,6 @@ class NotificacionCuentaAgenciadoExistente(BaseNotificacionMail):
 
   def get_context_dict(self):
     return {'agenciado': self.agenciado,
-      'ambiente': settings.AMBIENTE, 
       'password': self.password,
       'agencia': Agencia.get_activa()}
 
@@ -86,7 +85,6 @@ class NotificacionCuentaAgenciadoExistente(BaseNotificacionMail):
   def notificar_agenciado(agenciado, password, delay):
 
     for mail in agenciado.get_mails():
-      try:
 
         notificacion = NotificacionCuentaAgenciadoExistente(
           email_destinatario=mail, agenciado=agenciado)
@@ -95,8 +93,6 @@ class NotificacionCuentaAgenciadoExistente(BaseNotificacionMail):
         if delay:
           time.sleep(delay)
 
-      except:
-        pass
 
   @staticmethod
   def notificar_no_notificados(delay=None):

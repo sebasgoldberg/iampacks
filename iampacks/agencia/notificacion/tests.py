@@ -4,7 +4,6 @@ from iampacks.agencia.notificacion.models import NotificacionCuentaAgenciadoExis
 from django.core import mail
 from iampacks.agencia.agencia.models import Agenciado
 from django.contrib.auth.models import User
-import StringIO
 
 class NotificacionCuentaAgenciadoExistenteTestCase(TestCase):
 
@@ -53,7 +52,7 @@ class NotificacionCuentaAgenciadoExistenteTestCase(TestCase):
 
 class NotificacionAgenciadoConUsuario(TestCase):
 
-  fixtures = [u'fixture/test/agencia.json']
+  fixtures = [u'iampacks/agencia/agencia/fixture/test/agencia.json']
 
   def test_notificacion_enviada(self):
 

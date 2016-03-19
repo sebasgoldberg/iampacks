@@ -42,7 +42,7 @@ class Mail(EmailMultiAlternatives):
     from socket import error as socket_error
     try:
       self.mensaje.send()
-    except socket_error:
+    except socket_error as e:
       # @todo Ver de loguear el error.
       pass
 
