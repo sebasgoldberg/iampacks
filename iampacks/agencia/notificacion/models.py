@@ -49,7 +49,7 @@ class BaseNotificacionMail(models.Model):
     msg.set_html_body(html_content)
     msg.send()
 
-    self.fecha_envio = datetime.datetime.now()
+    self.fecha_envio = now()
     self.clean()
     self.save()
 

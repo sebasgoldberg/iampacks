@@ -8,16 +8,13 @@ Replace this with more appropriate tests for your application.
 from django.test import TestCase
 from iampacks.cross.zonomi.models import Zonomi
 import subprocess
+from iampacks.cross.zonomi import settings as zonomi_settings
 
 class ZonomiTest(TestCase):
 
-    def test_basic_addition(self):
-        """
-        Tests that 1 + 1 always equals 2.
-        """
-        self.assertEqual(1 + 1, 2)
-
     def test_add_domain_update_to_crontab(self):
+        if zonomi_settings.ZONOMI_API_KEY is None:
+            return
         zonomi = Zonomi()
         dominio = 'dominio.de.prueba'
         user = 'cerebro'

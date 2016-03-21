@@ -211,7 +211,7 @@ class AgenciaTestCase(TestCase):
     self.assertTrue(len(response.context['direccionFormSet'].non_form_errors())==0)
 
     # Se verifica que el usuario tiene asociado un perfil de agenciado inactivo.
-    print(response.content.decode('utf8'))
+    #print(response.content.decode('utf8'))
     agenciado=Agenciado.objects.get(user__username = 'test')
     self.assertFalse(agenciado.activo)
 

@@ -1,5 +1,6 @@
 from django.db import models
 import subprocess
+from iampacks.cross.zonomi import settings as zonomi_settings
 
 class Zonomi:
 
@@ -9,7 +10,7 @@ class Zonomi:
       self.__api_key = api_key
     else:
       from django.conf import settings
-      self.__api_key = settings.AMBIENTE.zonomi.api_key
+      self.__api_key = zonomi_settings.ZONOMI_API_KEY
 
     self.__base_url_service='https://zonomi.com/app/dns/dyndns.jsp'
   
