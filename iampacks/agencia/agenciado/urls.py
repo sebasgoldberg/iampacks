@@ -1,11 +1,11 @@
-from django.conf.urls import patterns, include, url
+from django.conf.urls import url
 from django.conf import settings
-
-# Uncomment the next two lines to enable the admin:
 from django.contrib import admin
+from iampacks.agencia.agenciado import views
+
 admin.autodiscover()
 
-urlpatterns = patterns('iampacks.agencia.agenciado.views',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'alternativa.views.home', name='home'),
     # url(r'^alternativa/', include('alternativa.foo.urls')),
@@ -14,7 +14,7 @@ urlpatterns = patterns('iampacks.agencia.agenciado.views',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^$', 'index'),
-    url(r'^postular/$', 'postular'),
-    )
+    url(r'^$', views.index),
+    url(r'^postular/$', views.postular),
+]
 

@@ -1,11 +1,10 @@
-from django.conf.urls import patterns, include, url
-from django.conf import settings
-
-# Uncomment the next two lines to enable the admin:
+from django.conf.urls import url
 from django.contrib import admin
+from iampacks.cross.direccion import views
+
 admin.autodiscover()
 
-urlpatterns = patterns('iampacks.cross.direccion.views',
+urlpatterns = [
     # Examples:
     # url(r'^$', 'alternativa.views.home', name='home'),
     # url(r'^alternativa/', include('alternativa.foo.urls')),
@@ -14,7 +13,6 @@ urlpatterns = patterns('iampacks.cross.direccion.views',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
-    url(r'^valores/select/estado/(\d+)/$', 'valores_select_estado'),
-    url(r'^valores/select/ciudad/(\d+)/$', 'valores_select_ciudad'),
-)
-
+    url(r'^valores/select/estado/(\d+)/$', views.valores_select_estado),
+    url(r'^valores/select/ciudad/(\d+)/$', views.valores_select_ciudad),
+]
