@@ -1,6 +1,7 @@
 #encoding=utf8
 
 AGENCIA_APPS = [
+    'django.contrib.sites',
     'imagekit',
     'captcha',
     #'modeltranslation',

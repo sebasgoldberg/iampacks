@@ -10,3 +10,4 @@ tags
 .coverage
 venv
 db.sqlite3
+project/static/*

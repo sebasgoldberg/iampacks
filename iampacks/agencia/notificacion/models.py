@@ -37,14 +37,13 @@ class BaseNotificacionMail(models.Model):
   def enviar(self):
 
     template = loader.get_template(self.get_template_name())
-    context = Context(self.get_context_dict())
     asunto = self.get_notification_title()
     destinatarios = [self.email_destinatario]
     agencia=Agencia.get_activa()
     ccs = self.get_ccs()
 
     text_content = _(u'Este mensagem deve ser visualizado em formato HTML.')
-    html_content = template.render(context)
+    html_content = template.render(self.get_context_dict())
     msg = MailAgencia(asunto, text_content, destinatarios,ccs=ccs)
     msg.set_html_body(html_content)
     msg.send()

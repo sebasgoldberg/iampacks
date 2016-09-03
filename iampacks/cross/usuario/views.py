@@ -43,8 +43,7 @@ def reiniciar_clave(request):
 
         asunto = _(u'Sua senha ha mudado')
         template = loader.get_template('usuario/mail/cambio_clave.txt')
-        context = RequestContext(request,{'usuario':user, 'clave':password})
-        text_content = template.render(context)
+        text_content = template.render({'usuario':user, 'clave':password})
         mail_class = get_mail_class()
         msg = mail_class(asunto,text_content,[user.email])
         msg.send()
@@ -93,8 +92,7 @@ def registro(request):
 
       asunto = _(u'Sua conta esta criada')
       template = loader.get_template('usuario/mail/creacion.txt')
-      context = RequestContext(request)
-      text_content = template.render(context)
+      text_content = template.render({'user': user,})
       mail_class = get_mail_class()
       msg = mail_class(asunto, text_content, [user.email])
       msg.send()
