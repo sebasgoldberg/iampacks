@@ -11,3 +11,4 @@ tags
 venv
 db.sqlite3
 project/static/*
+project/uploads/*

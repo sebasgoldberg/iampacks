@@ -19,6 +19,8 @@ from iampacks.cross.usuario.forms import UsuarioAuthenticationForm
 from django.views.generic import RedirectView
 import iampacks
 from django.contrib.auth.views import login
+from django.conf import settings
+from django.views.static import serve
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
@@ -33,4 +35,7 @@ urlpatterns = [
     url(r'^direccion/',include('iampacks.cross.direccion.urls')),
     url(r'^usuario/',include('iampacks.cross.usuario.urls')),
     url(r'^$', RedirectView.as_view(url='/agencia/')),
+    url(r'^uploads/(?P<path>.*)$', serve, {
+      'document_root': settings.MEDIA_ROOT,
+      }),
 ]

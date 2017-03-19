@@ -87,6 +87,7 @@ setup(
         'django-simple-captcha',
         'pyyaml',
         'django-modeltranslation',
+        'mysqlclient',
         ],
 
     # List additional groups of dependencies here (e.g. development

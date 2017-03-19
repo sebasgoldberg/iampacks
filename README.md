@@ -36,6 +36,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 And create the folder 'static' in the django project directory.
 
+if not configured MEDIA_ROOT and MEDIA_URL, then configure as, for example:
+
+
+```
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
+```
+
+
 urls.py
 -------
 
@@ -65,6 +75,17 @@ urlpatterns = [
 ]
 ```
 
+And to serv media files:
+
+```
+from django.views.static import serve
+...
+url(r'^media/(?P<path>.*)$', serve, {
+  'document_root': settings.MEDIA_ROOT,
+  }),
+```
+
+
 Commands to be executed:
 ------------------------
 
@@ -72,4 +93,39 @@ Commands to be executed:
 ./manage.py migrate
 ./manage.py collectstatic
 ./manage.py loadperfil
+```
+
+Steps to Migrate From Iamcast:
+------------------------------
+
+Migrate the database:
+====================
+
+From Iamcast:
+
+```
+./manage.py dumpdata --format json --indent 2 -e sessions > data.json
+```
+
+To Iampacks:
+
+```
+./manage.py loaddata -i data.json
+```
+
+It is possible to get some errors, so, you have to remove the entries from data.json that is causing the errors.
+
+Migrate the media:
+==================
+
+From Iamcast:
+
+```
+tar cvf uploads.tar.gz uploads
+```
+
+To Iampacks:
+
+```
+tar xvf uploads.tar.gz
 ```
