@@ -19,7 +19,12 @@
       <ul style='list-style:none;'>
         {% for postulacion in rol.postulacion_set.all %}
           <li>
-            {% autoescape off %}{{postulacion.agenciado.thumbnails_absolute_uri}}{%endautoescape%} {{postulacion.agenciado}} - {{postulacion.descripcion_estado}}
+              {% for foto in postulacion.agenciado.fotoagenciado_set.all %}
+                <a href='//{{request.get_host}}{{foto.foto.url}}'>
+                  <img src='//{{request.get_host}}{{foto.thumbnail.url}}' height=100 />
+                </a>
+              {% endfor %}
+            {{postulacion.agenciado}} - {{postulacion.descripcion_estado}}
           </li>
         {% empty %}
           <li>{% trans "Este perfil não tem postulações registradas" %}</li>

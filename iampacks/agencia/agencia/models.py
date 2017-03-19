@@ -228,6 +228,8 @@ class Agenciado(models.Model):
     thumbnails.allow_tags = True
     thumbnails.short_description = ugettext_lazy(u'Imagems')
 
+    # @deprecated
+    # @todo Delete this method.
     def thumbnails_absolute_uri(self):
       html=''
       fotos=self.fotoagenciado_set.order_by('id')
