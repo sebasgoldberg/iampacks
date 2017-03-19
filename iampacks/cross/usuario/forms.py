@@ -8,6 +8,7 @@ from django.utils.translation import ugettext_lazy
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 from captcha.fields import CaptchaField
+from django.contrib.auth import views as auth_views
 
 class UsuarioAuthenticationForm(AuthenticationForm):
 
@@ -16,7 +17,7 @@ class UsuarioAuthenticationForm(AuthenticationForm):
     self.helper = FormHelper()
     self.helper.form_class = 'uniForm'
     self.helper.form_method = 'post'
-    self.helper.form_action = 'django.contrib.auth.views.login'
+    self.helper.form_action = auth_views.login
     self.helper.add_input(Submit('submit',_('Ingresar')))
 
     if request: 
