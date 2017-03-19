@@ -58,6 +58,12 @@ TEMPLATES = [
                 ...
 ```
 
+If you want a random list of thumbnails url of pictures from your resources, add the following:
+
+```
+                'iampacks.agencia.agencia.context_processors.thumbnails_urls',
+```
+
 urls.py
 -------
 
