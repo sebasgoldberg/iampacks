@@ -45,6 +45,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 ```
 
+Context Processors: Add the following:
+
+```
+TEMPLATES = [
+    {
+        ...
+        'OPTIONS': {
+            'context_processors': [
+                ...
+                'iampacks.agencia.agencia.context_processors.agencia',
+                ...
+```
 
 urls.py
 -------

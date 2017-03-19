@@ -1,12 +1,4 @@
-from alternativa.ambiente import ambiente
 from iampacks.agencia.agencia.models import FotoAgenciado, Agencia
-
-
-def add_ambiente(request):
-    """
-    Devuelve los datos del ambiente
-    """
-    return {'ambiente': ambiente }
 
 class ThumbnailsUrls(object):
 
@@ -28,13 +20,13 @@ class ThumbnailsUrls(object):
     if len(self.abajo)<max_cantidad_thumbnails:
       self.abajo=self.arriba
 
-def add_thumbnails_urls(request):
+def thumbnails_urls(request):
   """
   Devuelve 10 agenciados al azar que contengan al menos un thumbnai
   """
   return {'thumbnails_urls': ThumbnailsUrls()}
 
-def add_agencia(request):
+def agencia(request):
   """
   Devuelve la agencia activa
   """

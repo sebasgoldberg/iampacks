@@ -11,7 +11,6 @@ from iampacks.cross.usuario.signals import usuario_after_register_before_redirec
 from django.conf import settings
 from iampacks.agencia.agencia.forms import EnvioMailForm
 from django.template import loader, Context
-from django.template import RequestContext
 from iampacks.agencia.agencia.mail import MailAgencia
 from django.contrib import messages
 from iampacks.agencia.agencia import settings as agencia_settings
@@ -41,7 +40,7 @@ def enviar_mail(request):
     # Se valida el formulario
     if form.is_valid():
       template = loader.get_template('correo/base.html')
-      context = RequestContext(request, {'cuerpo':form.cleaned_data['cuerpo'], })
+      context = {'cuerpo':form.cleaned_data['cuerpo'], }
       asunto = form.cleaned_data['asunto']
       agencia=Agencia.get_activa(request)
       destinatarios = [agencia.email,]

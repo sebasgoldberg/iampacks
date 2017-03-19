@@ -13,7 +13,6 @@ from iampacks.agencia.agencia.mail import MailAgencia
 from iampacks.agencia.trabajo.forms import MailProductoraForm, MailAgenciadosForm
 from django.conf import settings
 from django.contrib import messages
-from django.template import RequestContext
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_lazy
@@ -111,7 +110,7 @@ def trabajo_enviar_mail_productora(request,trabajo_id):
     form = MailProductoraForm(request.POST)
     if form.is_valid():
       template = loader.get_template('trabajo/trabajo/cuerpo_mail_productora.html')
-      context = RequestContext(request, {'trabajo':trabajo, })
+      context = {'trabajo':trabajo, }
       asunto = form.cleaned_data['asunto']
       destinatarios = form.get_destinatarios()
       agencia=Agencia.get_activa(request)
@@ -148,7 +147,7 @@ def trabajo_enviar_mail_agenciados(request,trabajo_id):
         text_content = _(u'Este mensagem deve ser visualizado em formato HTML.')
         for postulacion in postulaciones:
           if postulacion.agenciado.mail:
-            context = RequestContext(request, {'postulacion':postulacion, })
+            context = {'postulacion':postulacion, }
             html_content = template.render(context)
             destinatarios = [postulacion.agenciado.mail] + [x.email for x in postulacion.agenciado.mailagenciado_set.all()]
             msg = MailAgencia(asunto, text_content, destinatarios,ccs=ccs)

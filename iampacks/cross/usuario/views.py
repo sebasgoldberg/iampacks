@@ -6,7 +6,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.template import loader
 from django.contrib import messages
-from django.template import RequestContext
 from iampacks.cross.usuario.forms import UsuarioSetPasswordForm, UsuarioPasswordResetForm, UserCreateForm
 from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_lazy
