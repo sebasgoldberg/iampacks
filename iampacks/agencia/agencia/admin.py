@@ -208,11 +208,6 @@ class AgenciadoAdmin(admin.ModelAdmin):
     (None, {'fields':['thumbnails','id','mail']}),
     (ugettext_lazy(u'Dados Pessoales'), {'fields':[('nombre', 'apellido',), ('fecha_nacimiento', 'edad',)]}),
     (ugettext_lazy(u'Dados Administrativos'), { 'fields':[ ('documento_rg', 'documento_cpf'), 'responsable', 'cuenta_bancaria']}),
-    (None, {"classes": ("placeholder telefono_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder mailagenciado_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder direccionagenciado_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder fotoagenciado_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder videoagenciado_set-group",), "fields" : ()}),
     (ugettext_lazy(u'Carateristicas fisicas'), { 'fields':[ 
       'sexo', 
       ('ojos', 'pelo', 'piel', ), 
@@ -220,16 +215,11 @@ class AgenciadoAdmin(admin.ModelAdmin):
       ( 'talle_camisa', 'talle_pantalon', 'calzado'),
       'estado_dientes',]}),
     (ugettext_lazy(u'Habilidades'),{
-      'classes': ('grp-collapse grp-closed',),
       'fields':[ 'deportes', 'danzas', 'instrumentos', 'idiomas', ('indicador_maneja', 'indicador_tiene_registro')]
       }),
     (ugettext_lazy(u'Otros dados'), { 
-      'classes': ('grp-collapse grp-closed',),
       'fields':[ 'trabaja_como_extra', 'como_nos_conocio', 'observaciones', 'activo', 'fecha_ingreso']
       }),
-    (None, {"classes": ("placeholder disponibilidadtrabajoagenciado_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder trabajovigenteagenciado_set-group",), "fields" : ()}),
-    (None, {"classes": ("placeholder trabajorealizadoagenciado_set-group",), "fields" : ()}),
   ]
   inlines=[ DireccionAgenciadoInline, TelefonoInline, FotoAgenciadoInline, VideoAgenciadoInline, MailAgenciadoInline, DisponibilidadTrabajoAgenciadoInline, TrabajoVigenteAgenciadoInline, TrabajoRealizadoAgenciadoInline ]
   list_display=['thumbnail','id','apellido','nombre','fecha_nacimiento','descripcion','telefonos','mails', 'responsable']

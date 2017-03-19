@@ -88,6 +88,7 @@ setup(
         'pyyaml',
         'django-modeltranslation',
         'mysqlclient',
+        'django-jet',
         ],
 
     # List additional groups of dependencies here (e.g. development

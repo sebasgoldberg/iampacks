@@ -17,6 +17,9 @@ Install the package from git:
 settings.py
 -----------
 
+If you want a jet look and feel add 'jet' before 'django.contrib.admin' in de INSTALLED_APPS list.
+
+
 Add into the bottom of the file:
 
 ```
@@ -78,6 +81,7 @@ import iampacks
 from django.contrib.auth.views import login
 
 urlpatterns = [
+    url(r'^jet/', include('jet.urls', 'jet')), #OPTIONAL
     url(r'^admin/', admin.site.urls),
     url(r'^agencia/', include('iampacks.agencia.agencia.urls')),
     url(r'^agenciado/', include('iampacks.agencia.agenciado.urls')),

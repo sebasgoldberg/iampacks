@@ -22,7 +22,9 @@ from django.contrib.auth.views import login
 from django.conf import settings
 from django.views.static import serve
 
+
 urlpatterns = [
+    url(r'^jet/', include('jet.urls', 'jet')),
     url(r'^admin/', admin.site.urls),
     url(r'^agencia/', include('iampacks.agencia.agencia.urls')),
     url(r'^agenciado/', include('iampacks.agencia.agenciado.urls')),
