@@ -1,4 +1,6 @@
 # coding=utf-8
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from django.contrib.auth.models import User
 from datetime import date
@@ -58,7 +60,7 @@ class Agencia(models.Model):
     verbose_name = ugettext_lazy(u"Agencia")
     verbose_name_plural = ugettext_lazy(u"Agencias")
 
-  def __unicode__(self):
+  def __str__(self):
     return self.nombre
 
   def telefonos(self):
@@ -109,7 +111,7 @@ class Agenciador(models.Model):
 
   user= models.OneToOneField(User, null=False, blank=False)
 
-  def __unicode__(self):
+  def __str__(self):
     if self.user.name or self.user.lastname:
       return u'%s %s' % (self.user.first_name, self.user.last_name)
     return self.user.username
@@ -194,7 +196,7 @@ class Agenciado(models.Model):
     referente=models.OneToOneField(Agenciador, null=True, blank=True)
     nombre_completo = models.CharField(max_length=121, null=False, editable=False)
     
-    def __unicode__(self):
+    def __str__(self):
       return u'%s %s (%s)' % (self.nombre, self.apellido, self.fecha_nacimiento)
 
     def save(self, *args, **kwargs):
@@ -311,7 +313,7 @@ class MailAgenciado(models.Model):
   agenciado = models.ForeignKey(Agenciado)
   email = models.EmailField(verbose_name=ugettext_lazy(u'e-mail'), null=False , blank=False)
   descripcion = models.CharField(max_length=100, verbose_name=ugettext_lazy(u'Descripção'), null=True, blank=True)
-  def __unicode__(self):
+  def __str__(self):
     if self.descripcion:
       return u'%s (%s)' % (self.email, self.descripcion)
     return u'%s' % self.email
@@ -336,7 +338,7 @@ class FotoAgenciado(models.Model):
     foto = models.ImageField(verbose_name=ugettext_lazy(u'Foto (tamaño < %s MB)') % MAX_FOTO_SIZE, upload_to='agenciados/fotos/', blank=True, validators=[validate_image])
     thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1), ResizeToFill(100,100)], source='foto', format='JPEG', options={'quality': 90})
     mini_thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1), ResizeToFill(60,60)], source='foto', format='JPEG', options={'quality': 90})
-    def __unicode__(self):
+    def __str__(self):
       return self.foto.url
     class Meta:
       verbose_name = ugettext_lazy(u"Foto agenciado")

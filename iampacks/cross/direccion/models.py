@@ -1,4 +1,6 @@
 # coding=utf-8
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 import cities_light
 from cities_light.models import City, Region, Country
@@ -41,7 +43,7 @@ class Direccion(models.Model):
     verbose_name = ugettext_lazy(u"Endereço")
     verbose_name_plural = ugettext_lazy(u"Endereços")
 
-  def __unicode__(self):
+  def __str__(self):
     return "%s, %s, %s, %s" % (self.direccion, self.barrio, self.ciudad, self.codigo_postal)
 
   def save(self, *args, **kwargs):

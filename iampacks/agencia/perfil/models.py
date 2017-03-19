@@ -1,11 +1,13 @@
 # coding=utf-8
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.utils.translation import ugettext_lazy
 
 class Danza(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -14,7 +16,7 @@ class Danza(models.Model):
 
 class Deporte(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -23,7 +25,7 @@ class Deporte(models.Model):
 
 class EstadoDientes(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -32,21 +34,21 @@ class EstadoDientes(models.Model):
 
 class Idioma(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
 
 class Instrumento(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
 
 class Ojos(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -55,7 +57,7 @@ class Ojos(models.Model):
 
 class Pelo(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -64,7 +66,7 @@ class Pelo(models.Model):
 
 class Piel(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -73,7 +75,7 @@ class Piel(models.Model):
 
 class Talle(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripção'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']
@@ -82,7 +84,7 @@ class Talle(models.Model):
 
 class TalleRopa(models.Model):
     descripcion = models.CharField(max_length=60, unique=True, verbose_name=ugettext_lazy(u'Descripción'))
-    def __unicode__(self):
+    def __str__(self):
       return self.descripcion
     class Meta:
       ordering = ['descripcion']

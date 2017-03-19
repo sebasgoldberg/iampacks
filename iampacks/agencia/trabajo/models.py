@@ -1,4 +1,6 @@
 # coding=utf-8
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 
 from django.db import models
 from iampacks.agencia.agencia.models import Agenciado
@@ -35,7 +37,7 @@ class Productora(models.Model):
     [Adjust(contrast=1.2, sharpness=1.1), ResizeToFill(100,100)],
     source='imagen', format='JPEG', options={'quality': 90}
     )
-  def __unicode__(self):
+  def __str__(self):
     return self.nombre
   class Meta:
     ordering = ['nombre']
@@ -71,7 +73,7 @@ class Productora(models.Model):
     
 class DireccionProductora(Direccion):
   productora = models.ForeignKey(Productora, verbose_name=ugettext_lazy(u'Produtora'))
-  def __unicode__(self):
+  def __str__(self):
     return "%s, %s, %s, %s" % (self.direccion, self.barrio, self.ciudad, self.codigo_postal)
 
 class TelefonoProductora(Telefono):
@@ -85,7 +87,7 @@ class ItemPortfolio(models.Model):
     imagen = models.ImageField(upload_to='trabajo/portfolio/', null=True, blank=True)
     thumbnail = ImageSpecField([Adjust(contrast=1.2, sharpness=1.1), ResizeToFill(358,202)], source='imagen', format='JPEG', options={'quality': 90})
     fecha = models.DateField(default=now,verbose_name=ugettext_lazy(u'Data'))
-    def __unicode__(self):
+    def __str__(self):
       return self.titulo
     class Meta:
       ordering = ['-fecha']
@@ -159,7 +161,7 @@ class Trabajo(models.Model):
     def filter_activos(queryset):
       return queryset.filter(estado='AT')
 
-    def __unicode__(self):
+    def __str__(self):
       return _(u'%(titulo)s (%(fecha_ingreso)s)') % {'titulo':self.titulo, 'fecha_ingreso':self.fecha_ingreso}
     class Meta:
       verbose_name = ugettext_lazy(u'Trabalho')
@@ -232,7 +234,7 @@ class EventoTrabajo(Evento):
     return self.trabajo
   def descripcion_tipo(self):
     return DICT_TIPO_EVENTO_TRABAJO[self.tipo]
-  def __unicode__(self):
+  def __str__(self):
     return _('%(tipo)s | %(descripcion)s | %(fecha)s | %(direccion)s, %(barrio)s, %(ciudad)s, %(codigo_postal)s') % {
       'tipo':self.descripcion_tipo(), 
       'descripcion':self.descripcion,
@@ -261,7 +263,7 @@ class Rol(models.Model):
     descripcion = models.CharField(max_length=60, verbose_name=ugettext_lazy(u'Descripção'))
     cache = models.DecimalField(max_digits=15, decimal_places=2, null=True, blank=True)
     caracteristicas = models.TextField(verbose_name=ugettext_lazy(u'Caraterísticas'), null=True, blank=True)
-    def __unicode__(self):
+    def __str__(self):
       return u'%s (%s)' % (self.descripcion, self.trabajo.titulo)
     class Meta:
       ordering = ['-trabajo__fecha_ingreso','descripcion']
@@ -313,7 +315,7 @@ class EventoRol(Evento):
     return self.rol
   def descripcion_tipo(self):
     return DICT_TIPO_EVENTO_TRABAJO[self.tipo]
-  def __unicode__(self):
+  def __str__(self):
     return u'%(tipo)s | %(descripcion)s | %(fecha)s | %(direccion)s, %(barrio)s, %(ciudad)s, %(codigo_postal)s' % {
       'tipo':self.descripcion_tipo(), 
       'descripcion':self.descripcion, 
@@ -342,7 +344,7 @@ class Postulacion(models.Model):
     )
     DICT_ESTADO_POSTULACION=dict(ESTADO_POSTULACION)
     estado = models.CharField(max_length=2,choices=ESTADO_POSTULACION,default='PC')
-    def __unicode__(self):
+    def __str__(self):
       return u'%s | %s | %s' % (self.agenciado,Postulacion.DICT_ESTADO_POSTULACION[self.estado],self.rol)
     class Meta:
       ordering = ['-rol__trabajo__fecha_ingreso', 'rol__descripcion', 'agenciado__nombre', 'agenciado__apellido']

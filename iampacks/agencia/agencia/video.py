@@ -1,3 +1,5 @@
+from __future__ import unicode_literals
+from django.utils.encoding import python_2_unicode_compatible
 from django.db import models
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
@@ -16,7 +18,7 @@ class Video(models.Model):
   """
   codigo_video = models.CharField(max_length=30, unique=True, null=True, blank=True)
 
-  def __unicode__(self):
+  def __str__(self):
     return self.video
 
   class Meta:
