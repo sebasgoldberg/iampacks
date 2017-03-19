@@ -26,11 +26,12 @@ class BaseDireccionFormRelated(ModelForm):
 
     return query_model.objects.filter(**kwargs)
 
-  def __init__(self, data=None, files=None, auto_id='id_%s', prefix=None, 
-    initial=None, error_class=ErrorList, label_suffix=':',
-    empty_permitted=False, instance=None):
+  def __init__(self, data=None, files=None, auto_id='id_%s', prefix=None,
+    initial=None, error_class=ErrorList, label_suffix=None,
+    empty_permitted=False, instance=None, *args, **kwargs):
 
-    super(BaseDireccionFormRelated,self).__init__(data, files, auto_id, prefix, initial, error_class, label_suffix, empty_permitted, instance)
+    super(BaseDireccionFormRelated,self).__init__(data, files, auto_id, prefix, initial,
+            error_class, label_suffix, empty_permitted, instance, *args, **kwargs)
 
     if direccion_settings.COUNTRY_FILTER is not None:
         queryset_pais = Country.objects.filter(code2__in=direccion_settings.COUNTRY_FILTER)
