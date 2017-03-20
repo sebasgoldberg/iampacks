@@ -87,7 +87,6 @@ setup(
         'django-simple-captcha',
         'pyyaml',
         'django-modeltranslation',
-        'mysqlclient',
         'django-jet',
         ],
 

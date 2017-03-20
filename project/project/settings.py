@@ -25,7 +25,7 @@ SECRET_KEY = 's=0!r!k%co^_w1clc68d!*%(47s^k@osfzddu6w!*q*@(j$=+i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['iampacks.local',]
 
 
 # Application definition
@@ -66,7 +66,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'iampacks.agencia.agencia.context_processors.agencia',
-                'iampacks.agencia.agencia.context_processors.thumbnails_urls',
+                #'iampacks.agencia.agencia.context_processors.thumbnails_urls',
             ],
         },
     },
@@ -82,11 +82,12 @@ DATABASES = {
     'default': {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.mysql',
+        #'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'iampacks',                      # Or path to database file if using sqlite3.
         'USER': 'iampacks',                      # Not used with sqlite3.
         'PASSWORD': 'password',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
         'TEST_CHARSET': 'utf8',
     }
@@ -148,3 +149,4 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 # Examples: "http://media.lawrence.com/media/", "http://example.com/media/"
 MEDIA_URL = '/uploads/'
 
+SITIO_EXTERNO_URL = None

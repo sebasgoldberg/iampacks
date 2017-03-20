@@ -10,6 +10,21 @@ Ubuntu 14 (Pillow prerequisites):
 $ sudo apt-get install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms2-dev libwebp-dev tcl8.6-dev tk8.6-dev python-tk
 ```
 
+In case of using postgresql database:
+
+```
+sudo apt-get install postgresql libpq-dev postgresql-client postgresql-client-common
+pip install psycopg2
+sudo su postgreso
+createuser iampacks -P --interactive
+createdb iampacks
+psql
+GRANT ALL PRIVILEGES ON database iampacks TO iampacks;
+ALTER ROLE iampacks SET client_encoding TO 'utf8';
+ALTER ROLE iampacks SET default_transaction_isolation TO 'read committed';
+ALTER ROLE iampacks SET timezone TO 'UTC';
+```
+
 Install the package from git:
 
     $ pip install git+https://github.com/sebasgoldberg/iampacks.git
@@ -151,3 +166,9 @@ To Iampacks:
 ```
 tar xvf uploads.tar.gz
 ```
+settings.py (specific):
+-----------------------
+
+- SITIO_EXTERNO_URL (string, default None): To work with external site (if is defined, then, resource register fnuctionality is only available).
+- PHOTO_MANDATORY (boolean, default None): To determine if the resource photo is mandatory.
+
