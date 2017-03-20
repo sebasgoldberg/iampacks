@@ -94,6 +94,7 @@ from iampacks.cross.usuario.forms import UsuarioAuthenticationForm
 from django.views.generic import RedirectView
 import iampacks
 from django.contrib.auth.views import login
+from django.conf import settings
 
 urlpatterns = [
     url(r'^jet/', include('jet.urls', 'jet')), #OPTIONAL
