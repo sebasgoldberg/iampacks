@@ -25,7 +25,7 @@ SECRET_KEY = 's=0!r!k%co^_w1clc68d!*%(47s^k@osfzddu6w!*q*@(j$=+i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['iampacks.local',]
+ALLOWED_HOSTS = ['iampacks.local', 'cerebro.vpn.iamsoft.org']
 
 
 # Application definition

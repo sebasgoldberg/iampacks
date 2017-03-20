@@ -304,7 +304,7 @@ class Agenciado(models.Model):
 
     @staticmethod
     def autocomplete_search_fields():
-      return ("id__iexact", "nombre_completo__icontains",)
+      return ("nombre_completo",)
 
     class Meta:
       ordering = ['nombre', 'apellido']

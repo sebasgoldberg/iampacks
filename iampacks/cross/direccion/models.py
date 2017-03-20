@@ -24,7 +24,7 @@ class Ciudad(City):
 
   @staticmethod
   def autocomplete_search_fields():
-    return ("id__iexact", "name__icontains",)
+    return ("display_name",)
  
   class Meta:
     proxy = True
