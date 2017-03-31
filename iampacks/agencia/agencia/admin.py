@@ -224,7 +224,7 @@ class AgenciadoAdmin(admin.ModelAdmin):
   inlines=[ DireccionAgenciadoInline, TelefonoInline, FotoAgenciadoInline, VideoAgenciadoInline, MailAgenciadoInline, DisponibilidadTrabajoAgenciadoInline, TrabajoVigenteAgenciadoInline, TrabajoRealizadoAgenciadoInline ]
   list_display=['thumbnail','id','apellido','nombre','fecha_nacimiento','descripcion','telefonos','mails', 'responsable']
   list_display_links = ('thumbnail', 'id')
-  list_filter=['activo',FotoListFilter,'sexo',EdadMayorAListFilter,EdadMenorAListFilter,'ojos','pelo','piel','talle',AlturaMayorAListFilter,AlturaMenorAListFilter,'deportes','danzas','instrumentos','idiomas','fecha_ingreso',PaisDireccionAgenciadoListFilter, EstadoDireccionAgenciadoListFilter, CiudadDireccionAgenciadoListFilter]
+  list_filter=['site', 'activo',FotoListFilter,'sexo',EdadMayorAListFilter,EdadMenorAListFilter,'ojos','pelo','piel','talle',AlturaMayorAListFilter,AlturaMenorAListFilter,'deportes','danzas','instrumentos','idiomas','fecha_ingreso',PaisDireccionAgenciadoListFilter, EstadoDireccionAgenciadoListFilter, CiudadDireccionAgenciadoListFilter]
   search_fields=['nombre','apellido','responsable','mail','id']
   date_hierarchy='fecha_nacimiento'
   filter_horizontal=['deportes','danzas','instrumentos','idiomas']
@@ -251,7 +251,6 @@ class MailAgenciadoAdmin(admin.ModelAdmin):
 
 register_even_registered(Agenciado,AgenciadoAdmin)
 register_even_registered(Agencia,AgenciaAdmin)
-unregister_even_not_registered(Site)
 unregister_even_not_registered(Country)
 unregister_even_not_registered(Region)
 unregister_even_not_registered(City)

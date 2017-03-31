@@ -20,6 +20,8 @@ from django.contrib import messages
 from iampacks.cross.disponibilidad.models import Disponibilidad
 from django.utils import timezone
 from iampacks.agencia.agencia import settings as agencia_settings
+from django.contrib.sites.models import Site
+from django.contrib.sites.managers import CurrentSiteManager
 
 # @pre Esta rutina se llama desde el metodo clean de una clase que lo redefine y hereda de formset
 def validarUnoIngresado(formset,campo,mensaje):
@@ -55,6 +57,11 @@ class Agencia(models.Model):
   presentacion_home = models.TextField(null=True, blank=True, verbose_name=ugettext_lazy(u'Presentação pagina inicial'))
   mapa_contacto = models.TextField(null=True, blank=True, verbose_name=ugettext_lazy(u'Mapa pagina contato'), help_text=ugettext_lazy(u'Aqui tem que colar o HTML gerado no google maps a partir de seu endereço'))
   foto_agenciado_obligatoria = models.BooleanField(default=agencia_settings.PHOTO_MANDATORY, verbose_name=ugettext_lazy(u'Foto Agenciado Obligatoria'))
+  site = models.ForeignKey(Site, on_delete=models.PROTECT, default=settings.SITE_ID)
+
+  objects = models.Manager()
+  on_site = CurrentSiteManager()
+
   class Meta:
     ordering = ['nombre']
     verbose_name = ugettext_lazy(u"Agencia")
@@ -82,7 +89,7 @@ class Agencia(models.Model):
 
   @staticmethod
   def get_activa(request=None):
-    agencias = Agencia.objects.filter(activa=True).order_by('-id')
+    agencias = Agencia.on_site.filter(activa=True,).order_by('-id')
     if not agencias:
       return Agencia(nombre='Agencia',email='mail@agencia.com',activa=False)
     return agencias[0]
@@ -195,6 +202,8 @@ class Agenciado(models.Model):
     # Agenciador 
     referente=models.OneToOneField(Agenciador, null=True, blank=True)
     nombre_completo = models.CharField(max_length=121, null=False, editable=False)
+
+    site = models.ForeignKey(Site, on_delete=models.PROTECT, default=settings.SITE_ID)
     
     def __str__(self):
       return u'%s %s (%s)' % (self.nombre, self.apellido, self.fecha_nacimiento)
