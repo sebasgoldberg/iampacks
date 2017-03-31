@@ -173,3 +173,12 @@ settings.py (specific):
 - SITIO_EXTERNO_URL (string, default None): To work with external site (if is defined, then, resource register fnuctionality is only available).
 - PHOTO_MANDATORY (boolean, default None): To determine if the resource photo is mandatory.
 
+Working With Multiple Agencies
+==============================
+
+- The django site framework should be enable.
+- The corresponding site for each agancy should be created and assigned to de Agency.
+- Each site/agency must use independent django settings file (defined generally in the wsgi script file).
+
+So, basically you should create a new site, create a new agency, define a new settings file, define a new wsgi script.
+
