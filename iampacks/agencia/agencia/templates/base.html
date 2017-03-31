@@ -47,8 +47,8 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class='brand' {% if ambiente.sitio.externo.url %}href="{{ ambiente.sitio.externo.url }}" {%else%} href="/agencia/" {%endif%}>
-          {%if ambiente.sitio.externo.url %}{% trans "Volver a" %} {%endif%}{{agencia.nombre}}
+        <a class='brand' {% if agencia.works_with_external_site %}href="{{ agencia.external_site }}" {%else%} href="/agencia/" {%endif%}>
+          {%if agencia.works_with_external_site %}{% trans "Volver a" %} {%endif%}{{agencia.nombre}}
           {%comment%}
           {%if agencia.logo%}
             <img src='{{agencia.logo.url}}' alt="{{agencia.nombre}}"/>
@@ -58,7 +58,7 @@
           {%endcomment%}
         </a> 
         <div class="nav-collapse collapse">
-          {% if not ambiente.sitio.externo.url %}
+          {% if not agencia.works_with_external_site %}
             <ul class="nav">
               <li class='{%block agenciado_active%}{%endblock%}'><a href="/agenciado/"><span><i class='icon-user icon-white'></i> {% trans "Meu Perfil" %}</span></a> </li>
               <li class='{%block busquedas_active%}{%endblock%}'><a href="/trabajo/busquedas/"><span><i class='icon-search icon-white'></i> {% trans "Pesquisas" %}</span></a> </li>

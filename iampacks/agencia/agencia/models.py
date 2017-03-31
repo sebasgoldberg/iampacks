@@ -94,6 +94,12 @@ class Agencia(models.Model):
       return Agencia(nombre='Agencia',email='mail@agencia.com',activa=False)
     return agencias[0]
 
+  def works_with_external_site(self):
+    return settings.SITIO_EXTERNO_URL is not None
+
+  def external_site(self):
+    return settings.SITIO_EXTERNO_URL
+
 class TelefonoAgencia(BaseTelefono):
   agencia = models.ForeignKey(Agencia,null=False, blank=False, verbose_name=ugettext_lazy(u'Agencia'))
   class Meta(BaseTelefono.Meta):
