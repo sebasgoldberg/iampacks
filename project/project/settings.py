@@ -25,13 +25,14 @@ SECRET_KEY = 's=0!r!k%co^_w1clc68d!*%(47s^k@osfzddu6w!*q*@(j$=+i'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['iampacks.local', 'cerebro.vpn.iamsoft.org']
+ALLOWED_HOSTS = ['iampacks.local', 'cerebro.vpn.iamsoft.org', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'jet',
+    'corsheaders',
+    'jet', # must be before admin
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE_CLASSES = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -150,3 +152,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 MEDIA_URL = '/uploads/'
 
 SITIO_EXTERNO_URL = None
+
+REST_FRAMEWORK = {
+    #'DEFAULT_PERMISSION_CLASSES': [
+        #'rest_framework.permissions.IsAdminUser',
+    #],
+    'PAGE_SIZE': 10
+}
+
+CORS_ORIGIN_ALLOW_ALL = True
