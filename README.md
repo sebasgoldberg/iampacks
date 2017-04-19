@@ -34,6 +34,8 @@ settings.py
 
 If you want a jet look and feel add 'jet' before 'django.contrib.admin' in de INSTALLED_APPS list.
 
+'django.contrib.postgres' necesary for TrigramSimilarity in INSTALLED_APPS.
+
 
 Add into the bottom of the file:
 
@@ -182,3 +184,8 @@ Working With Multiple Agencies
 
 So, basically you should create a new site, create a new agency, define a new settings file, define a new wsgi script.
 
+Postgresql
+----------
+
+psql iampacks # version >=9.5
+CREATE EXTENSION pg_trgm;

@@ -108,3 +108,12 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('agenciado', 'url', 'username', 'email', 'is_staff')
 
 
+from iampacks.cross.direccion.models import Ciudad
+
+class CiudadSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Ciudad
+        fields = ('display_name', 'id')
+
+

@@ -20,9 +20,9 @@ router.register(r'idioma', IdiomaViewSet)
 
 router.register(r'agenciados', AgenciadoViewSet)
 
-print(router.urls)
 urlpatterns = [
     url(r'^', include(router.urls)),
+    url(r'^ciudad/$', AutocompleteCiudades.as_view()),
     url(r'^auth/', include('rest_framework.urls',
         namespace='rest_framework')),
 ]

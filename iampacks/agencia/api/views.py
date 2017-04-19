@@ -14,6 +14,23 @@ from django.http import Http404
 
 from iampacks.agencia.perfil.models import Ojos
 
+from django.contrib.postgres.search import TrigramSimilarity
+from iampacks.cross.direccion.models import Ciudad
+from rest_framework.views import APIView
+
+def autocomplete_ciudades(q):
+    return Ciudad.objects.annotate(
+            similarity=TrigramSimilarity('display_name',q),
+            ).filter(similarity__gt=0.15).order_by('-similarity')[:15]
+
+class AutocompleteCiudades(APIView):
+
+    def get(self, request, q=None):
+        q = request.query_params.get('q',None)
+        ciudades = autocomplete_ciudades(q)
+        serializer = CiudadSerializer(ciudades, many=True)
+        return Response(serializer.data)
+
 class LargeResultsSetPagination(PageNumberPagination):
     page_size = 1000
     #page_size_query_param = 'page_size'
