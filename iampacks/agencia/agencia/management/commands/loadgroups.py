@@ -7,10 +7,8 @@ class Command(BaseCommand):
   help=u'Crea los grupos con sus respectivos permisos'
 
   def handle(self,*args,**options):
-    permissions = Permission.objects.filter(content_type__app_label__in=['agencia','trabajo','telefono','perfil'])
-    agenciadores=Group(
-      name='agenciadores'
-      )
+    permissions = Permission.objects.filter(content_type__app_label__in=['agencia','trabajo','telefono','perfil', 'cities_light'])
+    agenciadores=Group.objects.get_or_create(name='agenciadores')
     agenciadores.save()
     agenciadores.permissions=[p.id for p in permissions]
     agenciadores.save()
